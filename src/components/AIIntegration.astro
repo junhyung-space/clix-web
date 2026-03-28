@@ -1,1 +1,95 @@
-<section>AIIntegration</section>
+---
+---
+
+<section
+  class="relative px-16 py-24 border-t border-white/[0.05] overflow-hidden"
+  style="background: linear-gradient(180deg, #080c14 0%, #0d1322 100%);"
+>
+  <!-- Background glow -->
+  <div
+    class="absolute -top-48 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
+    style="background: radial-gradient(ellipse, rgba(30,64,175,0.15), transparent 70%);"
+  ></div>
+
+  <!-- Section Header -->
+  <div class="text-center mb-16 relative">
+    <span
+      class="inline-block bg-blue-muted/15 border border-blue-muted/30 text-blue-accent
+             text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
+      data-i18n="ai.label"
+    >AI Integration</span>
+    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+      <span class="grad-text" data-i18n="ai.title1">AI 코딩 도구와</span>
+      <br />
+      <span class="grad-text" data-i18n="ai.title2">완전히 연결됩니다</span>
+    </h2>
+    <p class="text-text-muted text-base mt-3 max-w-lg mx-auto" data-i18n="ai.sub">
+      자동 설정, 실시간 알림, 세션 핸드오프 — 별도 설정 없이 바로 동작
+    </p>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+    <!-- Card 1: Zero-config (full width) -->
+    <div
+      class="card-top-line relative md:col-span-2 bg-white/[0.02] border border-blue-muted/15
+             rounded-2xl p-8"
+    >
+      <div class="text-3xl mb-4">⚡</div>
+      <h3
+        class="text-xl font-bold text-text-primary mb-2.5"
+        data-i18n="ai.card1.title"
+      >Zero-config AI 연동</h3>
+      <p class="text-sm text-text-muted leading-relaxed mb-4" data-i18n="ai.card1.desc">
+        앱을 처음 실행하면 Claude Code, Codex, Gemini CLI의 설정 파일을 자동으로 찾아 훅을 등록합니다. 별도로 설정할 것이 없어요.
+      </p>
+      <!-- Tool chips -->
+      <div class="flex gap-2 flex-wrap mb-5">
+        {['Claude Code · settings.json', 'Codex · hooks.json', 'Gemini · settings.json'].map(t => (
+          <span class="bg-blue-deep/20 border border-blue-muted/25 text-blue-accent/80 text-[11px] font-semibold px-2.5 py-0.5 rounded-md">{t}</span>
+        ))}
+      </div>
+      <!-- Terminal demo -->
+      <div class="bg-[#030712] border border-white/[0.06] rounded-xl p-4 font-mono text-xs">
+        <div class="text-text-darkest" data-i18n="ai.card1.demoComment"># AI 도구 실행 후 — CLIX가 자동으로 알림을 받아요</div>
+        <div class="text-text-primary mt-1">$ claude "리팩토링 마무리해줘"</div>
+        <div class="text-text-darkest mt-1">... working ...</div>
+        <div class="text-green-500 mt-1" data-i18n="ai.card1.demoSuccess">✓ Claude Code 작업 완료 → CLIX 알림 전송됨</div>
+      </div>
+    </div>
+
+    <!-- Card 2: clix-notify -->
+    <div
+      class="card-top-line relative bg-white/[0.02] border border-blue-muted/15 rounded-2xl p-8"
+    >
+      <div class="text-3xl mb-4">🔔</div>
+      <h3 class="text-xl font-bold text-text-primary mb-2.5 whitespace-pre-line" data-i18n="ai.card2.title">clix-notify
+인앱 알림</h3>
+      <p class="text-sm text-text-muted leading-relaxed mb-4" data-i18n="ai.card2.desc">
+        AI 작업이 완료되면 CLIX 앱 안에서 바로 알림을 받아요. 오래 걸리는 작업을 기다리지 않아도 됩니다.
+      </p>
+      <div class="bg-[#030712] border border-white/[0.06] rounded-xl p-4 font-mono text-xs">
+        <div class="text-text-primary">$ clix-notify "배포 완료" --kind completed</div>
+        <div class="text-blue-muted mt-1" data-i18n="ai.card2.demoOutput">→ CLIX 사이드바에 알림 표시됨</div>
+      </div>
+    </div>
+
+    <!-- Card 3: clix-handoff -->
+    <div
+      class="card-top-line relative bg-white/[0.02] border border-blue-muted/15 rounded-2xl p-8"
+    >
+      <div class="text-3xl mb-4">🔀</div>
+      <h3 class="text-xl font-bold text-text-primary mb-2.5 whitespace-pre-line" data-i18n="ai.card3.title">clix-handoff
+세션 핸드오프</h3>
+      <p class="text-sm text-text-muted leading-relaxed mb-4" data-i18n="ai.card3.desc">
+        다른 패인의 작업 디렉토리로 AI 도구를 바로 이어서 실행. 여러 서버에서 동시에 작업할 때 강력합니다.
+      </p>
+      <div class="bg-[#030712] border border-white/[0.06] rounded-xl p-4 font-mono text-xs">
+        <div class="text-text-primary">$ clix-handoff tab-2 claude</div>
+        <div class="text-blue-muted mt-1" data-i18n="ai.card3.demoOutput">→ tab-2 디렉토리에서 claude 실행됨</div>
+      </div>
+    </div>
+
+  </div>
+</section>
