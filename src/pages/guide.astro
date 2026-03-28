@@ -1,0 +1,86 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import GettingStarted from '../components/guide/sections/GettingStarted.astro';
+import AIIntegrationGuide from '../components/guide/sections/AIIntegrationGuide.astro';
+import WorkspaceGuide from '../components/guide/sections/WorkspaceGuide.astro';
+import SSHGuide from '../components/guide/sections/SSHGuide.astro';
+import PortForwardingGuide from '../components/guide/sections/PortForwardingGuide.astro';
+import BackupGuide from '../components/guide/sections/BackupGuide.astro';
+import SettingsGuide from '../components/guide/sections/SettingsGuide.astro';
+---
+
+<GuideLayout>
+  <GettingStarted />
+  <AIIntegrationGuide />
+  <WorkspaceGuide />
+  <SSHGuide />
+  <PortForwardingGuide />
+  <BackupGuide />
+  <SettingsGuide />
+</GuideLayout>
+
+<script>
+  const SECTIONS = [
+    'getting-started',
+    'ai-integration',
+    'workspace',
+    'ssh',
+    'port-forwarding',
+    'backup',
+    'settings',
+  ] as const;
+
+  type SectionId = (typeof SECTIONS)[number];
+
+  function showSection(id: SectionId) {
+    // Hide all sections
+    SECTIONS.forEach((s) => {
+      const el = document.getElementById(s);
+      if (el) el.style.display = 'none';
+    });
+
+    // Show target section
+    const target = document.getElementById(id);
+    if (target) target.style.display = 'block';
+
+    // Update sidebar active state
+    document.querySelectorAll<HTMLElement>('.guide-sidebar-item').forEach((btn) => {
+      const isActive = btn.dataset.section === id;
+      if (isActive) {
+        btn.classList.add('!text-blue-accent', 'font-semibold', '!border-l-blue-accent');
+        btn.classList.remove('text-text-muted');
+      } else {
+        btn.classList.remove('!text-blue-accent', 'font-semibold', '!border-l-blue-accent');
+        btn.classList.add('text-text-muted');
+      }
+    });
+
+    // Update URL hash without scroll jump
+    history.replaceState(null, '', `#${id}`);
+  }
+
+  function init() {
+    const hash = window.location.hash.slice(1) as SectionId;
+    const validHash = (SECTIONS as readonly string[]).includes(hash)
+      ? (hash as SectionId)
+      : 'getting-started';
+    showSection(validHash);
+  }
+
+  document.querySelectorAll<HTMLElement>('.guide-sidebar-item').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const section = btn.dataset.section as SectionId;
+      if (section && (SECTIONS as readonly string[]).includes(section)) {
+        showSection(section);
+      }
+    });
+  });
+
+  init();
+</script>
+
+<style>
+  :global(.guide-section) {
+    display: none;
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+import Layout from './Layout.astro';
+import Nav from '../components/Nav.astro';
+import GuideSidebar from '../components/guide/GuideSidebar.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'CLIX 가이드',
+  description = 'CLIX 사용 가이드 — 설치, AI 도구 연동, SSH 관리, 터미널 워크스페이스',
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+  <div class="flex min-h-[calc(100vh-52px)]">
+    <GuideSidebar />
+    <main class="flex-1 py-10 px-14" style="max-width: 760px;">
+      <slot />
+    </main>
+  </div>
+</Layout>
