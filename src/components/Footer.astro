@@ -1,1 +1,43 @@
-<footer>Footer</footer>
+---
+const GITHUB_URL = 'https://github.com/junhyunglee/clix';
+const RELEASES_URL = 'https://github.com/junhyunglee/clix/releases';
+const CONTACT_EMAIL = 'junhyung.lee@genesisnest.com';
+---
+
+<footer
+  class="px-16 py-10 border-t border-white/[0.04]"
+  style="background: #06080f;"
+>
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 no-underline">
+      <img src="/clix-web/icon.png" alt="CLIX" class="w-5 h-5 rounded" />
+      <span class="text-xs font-bold tracking-[2px] text-text-darkest">CLIX</span>
+    </a>
+
+    <!-- Links -->
+    <div class="flex items-center gap-6 flex-wrap justify-center">
+      <a
+        href={GITHUB_URL}
+        class="text-xs text-text-darkest hover:text-text-muted transition-colors"
+        data-i18n="footer.links.github"
+      >GitHub</a>
+      <a
+        href={RELEASES_URL}
+        class="text-xs text-text-darkest hover:text-text-muted transition-colors"
+        data-i18n="footer.links.releases"
+      >Releases</a>
+      <a
+        href={`mailto:${CONTACT_EMAIL}`}
+        class="text-xs text-text-darkest hover:text-text-muted transition-colors"
+      >{CONTACT_EMAIL}</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="text-xs text-text-darkest/60" data-i18n="footer.copyright">
+      © 2026 CLIX. All rights reserved.
+    </p>
+
+  </div>
+</footer>
