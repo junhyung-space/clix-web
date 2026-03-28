@@ -1,0 +1,32 @@
+---
+---
+<div id="backup" class="guide-section">
+  <p
+    class="text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase mb-2.5"
+    data-i18n="guide.backup.label"
+  >백업 & 복원</p>
+  <h2
+    class="text-3xl font-extrabold text-text-primary tracking-tight mb-3"
+    data-i18n="guide.backup.title"
+  >데이터 백업과 복원</h2>
+  <p
+    class="text-sm text-text-muted leading-relaxed mb-8"
+    data-i18n="guide.backup.sub"
+  >호스트, 자격증명, 라우팅 설정을 JSON으로 내보내고 다른 기기에서 가져올 수 있습니다.</p>
+
+  <div class="flex flex-col gap-5">
+    {[
+      { titleKey: 'guide.backup.exportTitle', descKey: 'guide.backup.exportDesc',
+        titleDefault: '내보내기',
+        descDefault: 'CLIX 메뉴 → Backup → Export를 선택합니다. 호스트, 자격증명, 라우팅 정보가 JSON 파일로 저장됩니다.' },
+      { titleKey: 'guide.backup.importTitle', descKey: 'guide.backup.importDesc',
+        titleDefault: '가져오기',
+        descDefault: '다른 기기에 CLIX를 설치한 뒤 CLIX 메뉴 → Backup → Import로 JSON 파일을 불러옵니다.' },
+    ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+      <div class="bg-white/[0.02] border border-blue-muted/[0.14] rounded-xl p-5">
+        <h3 class="text-sm font-bold text-text-primary mb-2" data-i18n={titleKey}>{titleDefault}</h3>
+        <p class="text-xs text-text-muted leading-relaxed" data-i18n={descKey}>{descDefault}</p>
+      </div>
+    ))}
+  </div>
+</div>
