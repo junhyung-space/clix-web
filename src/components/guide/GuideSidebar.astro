@@ -1,0 +1,70 @@
+---
+---
+<aside
+  class="w-[220px] flex-shrink-0 sticky top-[52px] h-[calc(100vh-52px)]
+         overflow-y-auto border-r border-blue-muted/[0.14] bg-bg-primary/60 py-7"
+>
+  <!-- Label -->
+  <p
+    class="text-[9px] font-bold text-text-darkest uppercase tracking-[0.08em] px-5 mb-1.5"
+    data-i18n="guide.sidebar.label"
+  >가이드</p>
+
+  <!-- Getting Started -->
+  <button
+    data-section="getting-started"
+    class="guide-sidebar-item w-full flex items-center gap-2 px-5 py-[7px] text-[12.5px]
+           text-text-muted text-left border-l-2 border-transparent
+           hover:text-text-secondary hover:bg-white/[0.03] transition-colors duration-150"
+  >
+    <span class="w-[18px] text-center text-sm">🚀</span>
+    <span data-i18n="guide.sidebar.gettingStarted">시작하기</span>
+  </button>
+
+  <!-- Divider -->
+  <div class="h-px bg-blue-muted/[0.12] mx-5 my-3"></div>
+
+  <!-- Features label -->
+  <p
+    class="text-[9px] font-bold text-text-darkest uppercase tracking-[0.08em] px-5 mb-1.5"
+    data-i18n="guide.sidebar.featuresLabel"
+  >기능</p>
+
+  <!-- Feature items -->
+  {[
+    { section: 'ai-integration',  icon: '🤖', key: 'guide.sidebar.ai',             defaultText: 'AI 도구 연동' },
+    { section: 'workspace',       icon: '🖥',  key: 'guide.sidebar.workspace',      defaultText: '터미널 워크스페이스' },
+    { section: 'ssh',             icon: '🔐', key: 'guide.sidebar.ssh',            defaultText: '호스트 & SSH 관리' },
+    { section: 'port-forwarding', icon: '🚇', key: 'guide.sidebar.portForwarding', defaultText: '포트 포워딩' },
+    { section: 'backup',          icon: '📦', key: 'guide.sidebar.backup',         defaultText: '백업 & 복원' },
+  ].map(({ section, icon, key, defaultText }) => (
+    <button
+      data-section={section}
+      class="guide-sidebar-item w-full flex items-center gap-2 px-5 py-[7px] text-[12.5px]
+             text-text-muted text-left border-l-2 border-transparent
+             hover:text-text-secondary hover:bg-white/[0.03] transition-colors duration-150"
+    >
+      <span class="w-[18px] text-center text-sm">{icon}</span>
+      <span data-i18n={key}>{defaultText}</span>
+    </button>
+  ))}
+
+  <!-- Divider -->
+  <div class="h-px bg-blue-muted/[0.12] mx-5 my-3"></div>
+
+  <!-- Other label -->
+  <p
+    class="text-[9px] font-bold text-text-darkest uppercase tracking-[0.08em] px-5 mb-1.5"
+    data-i18n="guide.sidebar.otherLabel"
+  >기타</p>
+
+  <button
+    data-section="settings"
+    class="guide-sidebar-item w-full flex items-center gap-2 px-5 py-[7px] text-[12.5px]
+           text-text-muted text-left border-l-2 border-transparent
+           hover:text-text-secondary hover:bg-white/[0.03] transition-colors duration-150"
+  >
+    <span class="w-[18px] text-center text-sm">⚙️</span>
+    <span data-i18n="guide.sidebar.settings">설정</span>
+  </button>
+</aside>
