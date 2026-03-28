@@ -4,6 +4,6 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
-  site: 'https://junhyunglee.github.io',
+  site: 'https://junhyung-space.github.io',
   base: '/clix-web',
 });
