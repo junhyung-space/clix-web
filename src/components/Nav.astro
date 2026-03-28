@@ -1,9 +1,13 @@
+---
+const isGuide = Astro.url.pathname.startsWith('/guide');
+---
+
 <nav
   class="sticky top-0 z-50 flex items-center justify-between px-8 md:px-16 py-4
          bg-bg-primary/90 border-b border-blue-muted/10 backdrop-blur-xl"
 >
   <!-- Logo -->
-  <a href="#" class="flex items-center gap-3 no-underline">
+  <a href="/" class="flex items-center gap-3 no-underline">
     <div class="w-12 h-12 md:w-14 md:h-14">
       <img
         src="/icon.png"
@@ -18,6 +22,19 @@
 
   <!-- Right -->
   <div class="flex items-center gap-4">
+    <!-- Guide link -->
+    <a
+      href="/guide"
+      class={`text-sm font-medium transition-colors ${
+        isGuide
+          ? 'text-blue-accent'
+          : 'text-text-muted hover:text-text-secondary'
+      }`}
+      data-i18n="nav.guide"
+    >
+      가이드
+    </a>
+
     <button
       id="lang-toggle"
       class="text-xs text-text-secondary border border-text-darkest/40
