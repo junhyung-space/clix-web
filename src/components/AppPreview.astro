@@ -1,1 +1,39 @@
-<section>AppPreview</section>
+---
+---
+
+<section
+  class="px-16 py-24 border-t border-white/[0.04] text-center"
+  style="background: #0a0e1a;"
+>
+  <span
+    class="inline-block bg-blue-muted/15 border border-blue-muted/30 text-blue-accent
+           text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
+    data-i18n="preview.label"
+  >App Preview</span>
+  <h2 class="text-4xl font-extrabold tracking-tight mb-2">
+    <span class="grad-text" data-i18n="preview.title">직접 보세요</span>
+  </h2>
+  <p class="text-text-muted text-sm mb-10" data-i18n="preview.sub">스크린샷 준비 중</p>
+
+  <!-- App window frame -->
+  <div
+    class="max-w-4xl mx-auto rounded-2xl overflow-hidden"
+    style="background: #0d1320; border: 1px solid rgba(59,130,246,0.18); box-shadow: 0 0 100px rgba(14,165,233,0.1), 0 60px 100px rgba(0,0,0,0.5);"
+  >
+    <!-- Title bar -->
+    <div class="flex items-center gap-2 px-5 py-3.5 border-b border-white/[0.05]" style="background: #111827;">
+      <span class="w-3 h-3 rounded-full" style="background:#ff5f57;"></span>
+      <span class="w-3 h-3 rounded-full" style="background:#febc2e;"></span>
+      <span class="w-3 h-3 rounded-full" style="background:#28c840;"></span>
+      <span class="text-text-darkest text-xs font-mono ml-2.5">CLIX — production-server-01</span>
+    </div>
+    <!-- Placeholder body -->
+    <div
+      class="flex flex-col items-center justify-center gap-3 py-32"
+      style="background: linear-gradient(180deg, #0d1117, #080c14);"
+    >
+      <span class="text-5xl opacity-10">🖥️</span>
+      <p class="text-text-darkest text-sm" data-i18n="preview.placeholder">실제 스크린샷으로 교체 예정</p>
+    </div>
+  </div>
+</section>
