@@ -1,1 +1,41 @@
-<section>Download</section>
+---
+const DOWNLOAD_URL =
+  'https://github.com/junhyunglee/clix/releases/latest/download/clix.dmg';
+const RELEASES_URL =
+  'https://github.com/junhyunglee/clix/releases';
+---
+
+<section
+  class="px-16 py-28 border-t border-blue-muted/10 text-center"
+  style="background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(30,64,175,0.18), transparent 70%), #080c14;"
+>
+  <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+    <span class="grad-text" data-i18n="download.title1">지금 무료로</span>
+    <br />
+    <span class="grad-text" data-i18n="download.title2">시작하세요</span>
+  </h2>
+  <p class="text-text-muted text-base mb-10" data-i18n="download.sub">
+    GitHub Releases에서 최신 버전을 다운로드
+  </p>
+
+  <div class="flex flex-col items-center gap-4">
+    <a
+      href={DOWNLOAD_URL}
+      class="btn-primary inline-flex items-center gap-2.5 text-white
+             text-lg font-bold px-14 py-5 rounded-xl transition-all duration-200"
+      data-i18n="download.cta"
+    >
+      macOS용 CLIX 다운로드
+    </a>
+    <p class="text-xs text-text-darkest" data-i18n="download.req">
+      macOS 14.0 Sonoma 이상 · Apple Silicon & Intel 지원
+    </p>
+    <a
+      href={RELEASES_URL}
+      class="text-xs text-blue-dim hover:text-blue-muted transition-colors"
+      data-i18n="download.releases"
+    >
+      GitHub Releases에서 더 많은 버전 보기 →
+    </a>
+  </div>
+</section>
