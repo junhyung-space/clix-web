@@ -6,7 +6,7 @@ export const ko = {
 
   // Hero
   hero: {
-    headline1: 'SSH 터미널,',
+    headline1: 'SSH 작업을 더 자연스럽게',
     headline2: 'AI 코딩 도구와 함께',
     sub: 'Claude Code, Codex, Gemini CLI와 함께 쓰기 좋은 macOS SSH 워크스페이스 앱',
     cta: '공개 배포 준비 중',
