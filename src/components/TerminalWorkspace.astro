@@ -1,11 +1,11 @@
 ---
 const features = [
   { icon: '🗂', titleKey: 'workspace.feat1Title', descKey: 'workspace.feat1Desc',
-    titleDefault: '탭과 분할 창',
-    descDefault: '여러 서버 세션을 탭과 좌우·상하 분할 창으로 함께 관리할 수 있습니다.' },
+    titleDefault: '세션 전환',
+    descDefault: '열린 터미널 세션을 사이드바에서 빠르게 오가며 작업할 수 있습니다.' },
   { icon: '💾', titleKey: 'workspace.feat2Title', descKey: 'workspace.feat2Desc',
     titleDefault: '워크스페이스 복구',
-    descDefault: '앱을 다시 실행해도 탭·분할 창 레이아웃과 작업 디렉토리가 그대로 복원됩니다.' },
+    descDefault: '앱을 다시 실행해도 열려 있던 세션과 작업 디렉토리를 이어서 복구할 수 있습니다.' },
   { icon: '⚡', titleKey: 'workspace.feat3Title', descKey: 'workspace.feat3Desc',
     titleDefault: 'Ghostty 엔진',
     descDefault: 'Ghostty/libghostty 기반의 네이티브 렌더링. 빠르고 정확한 터미널 에뮬레이션.' },
@@ -25,12 +25,12 @@ const features = [
         data-i18n="workspace.label"
       >Terminal Workspace</span>
       <h2 class="text-4xl font-extrabold tracking-tight leading-tight mb-3">
-        <span class="grad-text" data-i18n="workspace.title1">분할 터미널과</span>
+        <span class="grad-text" data-i18n="workspace.title1">터미널 워크스페이스와</span>
         <br />
-        <span class="grad-text" data-i18n="workspace.title2">워크스페이스 복구</span>
+        <span class="grad-text" data-i18n="workspace.title2">작업 복구</span>
       </h2>
       <p class="text-text-muted text-sm leading-relaxed" data-i18n="workspace.sub">
-        여러 서버를 동시에 보며 작업하고, 다시 열어도 이전 상태를 이어갈 수 있습니다
+        여러 세션을 전환하며 작업하고, 다시 열어도 이전 작업 상태를 이어갈 수 있습니다
       </p>
 
       <div class="mt-8 flex flex-col gap-5">
@@ -53,36 +53,17 @@ const features = [
       </div>
     </div>
 
-    <!-- Right: Terminal Mockup -->
+    <!-- Right: Terminal screenshot -->
     <div
       class="rounded-2xl overflow-hidden"
       style="background: #0d1117; border: 1px solid rgba(59,130,246,0.2); box-shadow: 0 0 60px rgba(14,165,233,0.08), 0 30px 60px rgba(0,0,0,0.4);"
     >
-      <!-- Title bar -->
-      <div class="flex items-center gap-2 px-4 py-3 border-b border-white/[0.05]" style="background: #111827;">
-        <span class="w-3 h-3 rounded-full" style="background:#ff5f57;"></span>
-        <span class="w-3 h-3 rounded-full" style="background:#febc2e;"></span>
-        <span class="w-3 h-3 rounded-full" style="background:#28c840;"></span>
-        <span class="text-text-darkest text-xs font-mono ml-2">CLIX — prod · staging</span>
-      </div>
-      <!-- Split panes -->
-      <div class="grid grid-cols-2 divide-x divide-white/[0.04]">
-        <div class="p-4 font-mono text-xs min-h-[200px]">
-          <div class="text-blue-dim font-bold mb-2 text-[10px] tracking-wide">⬤ prod-server</div>
-          <div class="text-text-darkest">$ git pull origin main</div>
-          <div class="text-text-secondary mt-1">Already up to date.</div>
-          <div class="text-text-darkest mt-2">$ docker compose up -d</div>
-          <div class="text-green-500 mt-1">✓ 3 containers started</div>
-          <div class="mt-2 text-text-secondary">$ <span class="inline-block w-2 h-3 bg-blue-muted align-middle"></span></div>
-        </div>
-        <div class="p-4 font-mono text-xs min-h-[200px]">
-          <div class="text-blue-dim font-bold mb-2 text-[10px] tracking-wide">⬤ staging-server</div>
-          <div class="text-text-darkest">$ claude "analyze server logs"</div>
-          <div class="text-blue-muted mt-1">... analyzing ...</div>
-          <div class="text-text-secondary mt-2">→ waiting for notification</div>
-          <div class="mt-4 text-text-secondary">$ <span class="inline-block w-2 h-3 bg-blue-muted align-middle"></span></div>
-        </div>
-      </div>
+      <img
+        src="/images/clix-terminal-workspace.png"
+        alt="CLIX terminal workspace screenshot"
+        class="block w-full h-auto"
+        loading="lazy"
+      />
     </div>
 
   </div>

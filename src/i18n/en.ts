@@ -8,7 +8,7 @@ export const en: Translations = {
   hero: {
     headline1: 'SSH terminal,',
     headline2: 'built for AI coding tools.',
-    sub: 'A macOS SSH client made for developers using Claude Code, Codex, and Gemini CLI.',
+    sub: 'A macOS SSH workspace app for developers using Claude Code, Codex, and Gemini CLI.',
     cta: 'Download for macOS — Free',
     meta: 'macOS 14.0 Sonoma or later · Apple Silicon & Intel',
   },
@@ -31,20 +31,20 @@ export const en: Translations = {
     },
     card3: {
       title: 'clix-handoff\nSession handoff',
-      desc: 'Resume an AI tool in another pane\'s working directory with one command. Essential when juggling multiple servers.',
+      desc: 'Resume an AI tool in another tab\'s working directory with one command. Useful when moving between multiple servers.',
       demoOutput: '→ claude launched in tab-2 directory',
     },
   },
 
   workspace: {
     label: 'Terminal Workspace',
-    title1: 'Multi-pane terminal',
-    title2: 'and workspace recovery.',
-    sub: 'Work across multiple servers at once. Restart and everything comes back exactly as you left it.',
-    feat1Title: 'Multi-tab & split panes',
-    feat1Desc: 'Manage multiple server sessions side-by-side with tabs and horizontal/vertical splits.',
+    title1: 'Terminal workspace',
+    title2: 'and session recovery.',
+    sub: 'Move between multiple sessions and pick up where you left off after reopening the app.',
+    feat1Title: 'Session switching',
+    feat1Desc: 'Move between open terminal sessions quickly from the workspace sidebar.',
     feat2Title: 'Workspace recovery',
-    feat2Desc: 'Tabs, pane layout, and working directories are fully restored after restart.',
+    feat2Desc: 'Restore open sessions and working directories after restarting the app.',
     feat3Title: 'Ghostty engine',
     feat3Desc: 'Native rendering via Ghostty/libghostty. Fast, accurate terminal emulation on macOS.',
   },
@@ -71,8 +71,8 @@ export const en: Translations = {
   preview: {
     label: 'App Preview',
     title: 'See it in action',
-    sub: 'Screenshots coming soon',
-    placeholder: 'Screenshot placeholder — will be replaced',
+    sub: 'Manage Hosts, Keychain, Port Forwarding, and Snippets in one place.',
+    placeholder: 'CLIX main view for managing hosts and SSH settings',
   },
 
   download: {

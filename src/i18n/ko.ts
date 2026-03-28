@@ -8,7 +8,7 @@ export const ko = {
   hero: {
     headline1: 'SSH 터미널,',
     headline2: 'AI 코딩 도구와 함께',
-    sub: 'Claude Code, Codex, Gemini CLI와 함께 쓰기 좋은 macOS SSH 클라이언트',
+    sub: 'Claude Code, Codex, Gemini CLI와 함께 쓰기 좋은 macOS SSH 워크스페이스 앱',
     cta: 'macOS용 무료 다운로드',
     meta: 'macOS 14.0 Sonoma 이상 · Apple Silicon & Intel',
   },
@@ -32,7 +32,7 @@ export const ko = {
     },
     card3: {
       title: 'clix-handoff\n세션 핸드오프',
-      desc: '다른 분할 창의 작업 디렉토리에서 AI 도구를 이어서 실행할 수 있습니다. 여러 서버를 오가며 작업할 때 유용합니다.',
+      desc: '다른 탭의 작업 디렉토리에서 AI 도구를 이어서 실행할 수 있습니다. 여러 서버를 오가며 작업할 때 유용합니다.',
       demoOutput: '→ tab-2 디렉토리에서 claude 실행',
     },
   },
@@ -40,13 +40,13 @@ export const ko = {
   // Terminal Workspace
   workspace: {
     label: 'Terminal Workspace',
-    title1: '분할 터미널과',
-    title2: '워크스페이스 복구',
-    sub: '여러 서버를 동시에 보며 작업하고, 다시 열어도 이전 상태를 이어갈 수 있습니다',
-    feat1Title: '탭과 분할 창',
-    feat1Desc: '여러 서버 세션을 탭과 좌우·상하 분할 창으로 함께 관리할 수 있습니다.',
+    title1: '터미널 워크스페이스와',
+    title2: '작업 복구',
+    sub: '여러 세션을 전환하며 작업하고, 다시 열어도 이전 작업 상태를 이어갈 수 있습니다',
+    feat1Title: '세션 전환',
+    feat1Desc: '열린 터미널 세션을 사이드바에서 빠르게 오가며 작업할 수 있습니다.',
     feat2Title: '워크스페이스 복구',
-    feat2Desc: '앱을 다시 실행해도 탭·분할 창 레이아웃과 작업 디렉토리가 그대로 복원됩니다.',
+    feat2Desc: '앱을 다시 실행해도 열려 있던 세션과 작업 디렉토리를 이어서 복구할 수 있습니다.',
     feat3Title: 'Ghostty 엔진',
     feat3Desc: 'Ghostty/libghostty 기반의 네이티브 렌더링. 빠르고 정확한 터미널 에뮬레이션.',
   },
@@ -75,8 +75,8 @@ export const ko = {
   preview: {
     label: 'App Preview',
     title: '앱 미리보기',
-    sub: '스크린샷은 준비 중입니다',
-    placeholder: '실제 스크린샷으로 곧 교체됩니다',
+    sub: 'Hosts, Keychain, Port Forwarding, Snippets를 한 화면에서 관리할 수 있습니다',
+    placeholder: '호스트와 SSH 설정을 한곳에서 관리하는 CLIX 메인 화면',
   },
 
   // Download
