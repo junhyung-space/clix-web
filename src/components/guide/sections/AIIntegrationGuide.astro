@@ -1,0 +1,67 @@
+---
+---
+<div id="ai-integration" class="guide-section">
+  <p
+    class="text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase mb-2.5"
+    data-i18n="guide.ai.label"
+  >AI 도구 연동</p>
+  <h2
+    class="text-3xl font-extrabold text-text-primary tracking-tight mb-3"
+    data-i18n="guide.ai.title"
+  >AI 코딩 도구 연동</h2>
+  <p
+    class="text-sm text-text-muted leading-relaxed mb-8"
+    data-i18n="guide.ai.sub"
+  >처음 실행 시 Claude Code, Codex, Gemini CLI 설정을 자동으로 잡아줍니다.</p>
+
+  <!-- Zero-config -->
+  <div class="mb-6">
+    <h3 class="text-base font-bold text-text-primary mb-2" data-i18n="guide.ai.zeroConfigTitle">Zero-config 훅 자동 설정</h3>
+    <p class="text-xs text-text-muted leading-relaxed mb-3" data-i18n="guide.ai.zeroConfigDesc">
+      앱을 처음 실행하면 Claude Code, Codex, Gemini CLI 설정 파일을 찾아 clix-notify 훅을 자동으로 등록합니다.
+    </p>
+    <div class="bg-[#0d1117] border border-blue-muted/20 rounded-xl p-4 font-mono text-xs">
+      <div class="text-text-darkest"># 첫 실행 시 자동 설정됩니다</div>
+      <div class="text-green-500 mt-1">✓ Claude Code hooks configured</div>
+      <div class="text-green-500">✓ Codex hooks configured</div>
+      <div class="text-green-500">✓ Gemini CLI hooks configured</div>
+    </div>
+  </div>
+
+  <!-- clix-notify -->
+  <div class="mb-6">
+    <h3 class="text-base font-bold text-text-primary mb-2" data-i18n="guide.ai.notifyTitle">clix-notify — 인앱 알림</h3>
+    <p class="text-xs text-text-muted leading-relaxed mb-3" data-i18n="guide.ai.notifyDesc">
+      터미널에서 clix-notify 명령어로 CLIX 앱 안에 알림을 보낼 수 있습니다.
+    </p>
+    <div class="bg-[#0d1117] border border-blue-muted/20 rounded-xl p-4 font-mono text-xs">
+      <div class="text-green-500">$ clix-notify "배포 완료" --kind completed</div>
+      <div class="text-blue-muted mt-1">→ CLIX 사이드바에 알림이 표시됨</div>
+    </div>
+  </div>
+
+  <!-- clix-handoff -->
+  <div class="mb-6">
+    <h3 class="text-base font-bold text-text-primary mb-2" data-i18n="guide.ai.handoffTitle">clix-handoff — 세션 핸드오프</h3>
+    <p class="text-xs text-text-muted leading-relaxed mb-3" data-i18n="guide.ai.handoffDesc">
+      다른 탭의 작업 디렉토리에서 AI 도구를 이어서 실행합니다.
+    </p>
+    <div class="bg-[#0d1117] border border-blue-muted/20 rounded-xl p-4 font-mono text-xs">
+      <div class="text-green-500">$ clix-handoff tab-2 claude</div>
+      <div class="text-blue-muted mt-1">→ tab-2 디렉토리에서 claude 실행</div>
+    </div>
+  </div>
+
+  <!-- clix-sessions -->
+  <div>
+    <h3 class="text-base font-bold text-text-primary mb-2" data-i18n="guide.ai.sessionsTitle">clix-sessions — 세션 목록</h3>
+    <p class="text-xs text-text-muted leading-relaxed mb-3" data-i18n="guide.ai.sessionsDesc">
+      현재 열린 모든 CLIX 세션과 작업 디렉토리를 확인합니다.
+    </p>
+    <div class="bg-[#0d1117] border border-blue-muted/20 rounded-xl p-4 font-mono text-xs">
+      <div class="text-green-500">$ clix-sessions</div>
+      <div class="text-blue-muted mt-1">tab-1  server-a  /home/user/project</div>
+      <div class="text-blue-muted">tab-2  server-b  /var/www/app</div>
+    </div>
+  </div>
+</div>

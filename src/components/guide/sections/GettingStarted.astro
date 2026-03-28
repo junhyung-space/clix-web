@@ -1,0 +1,53 @@
+---
+---
+<div id="getting-started" class="guide-section">
+  <p
+    class="text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase mb-2.5"
+    data-i18n="guide.gettingStarted.label"
+  >시작하기</p>
+  <h2
+    class="text-3xl font-extrabold text-text-primary tracking-tight mb-3"
+    data-i18n="guide.gettingStarted.title"
+  >설치부터 첫 연결까지</h2>
+  <p
+    class="text-sm text-text-muted leading-relaxed mb-8"
+    data-i18n="guide.gettingStarted.sub"
+  >CLIX를 설치하고 첫 번째 서버에 접속하는 방법을 안내합니다. 셸 통합은 앱 실행 시 자동으로 설정됩니다.</p>
+
+  <!-- Steps -->
+  <div class="flex flex-col gap-4 mb-8">
+    {[
+      { num: 1, titleKey: 'guide.gettingStarted.step1Title', descKey: 'guide.gettingStarted.step1Desc',
+        titleDefault: 'DMG 파일 다운로드', descDefault: '다운로드 페이지에서 최신 버전의 clix.dmg를 받아 앱 폴더에 설치합니다.' },
+      { num: 2, titleKey: 'guide.gettingStarted.step2Title', descKey: 'guide.gettingStarted.step2Desc',
+        titleDefault: '앱 실행 → 셸 통합 자동 설정', descDefault: '처음 실행하면 shell-integration.zsh 설치 여부를 묻습니다.' },
+      { num: 3, titleKey: 'guide.gettingStarted.step3Title', descKey: 'guide.gettingStarted.step3Desc',
+        titleDefault: '첫 번째 호스트 추가', descDefault: '사이드바 하단 + 버튼을 눌러 호스트 정보를 입력합니다.' },
+    ].map(({ num, titleKey, descKey, titleDefault, descDefault }) => (
+      <div class="flex gap-4 items-start bg-white/[0.02] border border-blue-muted/[0.14] rounded-xl p-4">
+        <div class="w-6 h-6 rounded-full bg-blue-deep/20 border border-blue-muted/30 text-blue-accent text-[11px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+          {num}
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-text-primary mb-1" data-i18n={titleKey}>{titleDefault}</h4>
+          <p class="text-xs text-text-muted leading-relaxed" data-i18n={descKey}>{descDefault}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Tip -->
+  <div class="bg-blue-deep/[0.06] border border-blue-muted/20 rounded-xl p-4 mb-6">
+    <p class="text-xs font-semibold text-blue-accent mb-1" data-i18n="guide.gettingStarted.tipTitle">셸 통합 확인하기</p>
+    <p class="text-xs text-blue-muted/90 leading-relaxed" data-i18n="guide.gettingStarted.tipDesc">
+      터미널에서 clix-notify "테스트"를 실행해보세요. CLIX 앱에 알림이 오면 정상입니다.
+    </p>
+  </div>
+
+  <!-- Code block -->
+  <div class="bg-[#0d1117] border border-blue-muted/20 rounded-xl p-4 font-mono text-xs">
+    <div class="text-text-darkest"># 셸 통합 정상 동작 확인</div>
+    <div class="text-green-500 mt-1">$ clix-notify "빌드 완료"</div>
+    <div class="text-blue-muted mt-1">✓ 알림이 CLIX로 전송되었습니다</div>
+  </div>
+</div>
