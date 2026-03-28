@@ -1,7 +1,7 @@
 export const ko = {
   // Nav
   nav: {
-    download: '다운로드',
+    download: '출시 예정',
   },
 
   // Hero
@@ -9,7 +9,7 @@ export const ko = {
     headline1: 'SSH 터미널,',
     headline2: 'AI 코딩 도구와 함께',
     sub: 'Claude Code, Codex, Gemini CLI와 함께 쓰기 좋은 macOS SSH 워크스페이스 앱',
-    cta: 'macOS용 무료 다운로드',
+    cta: '공개 배포 준비 중',
     meta: 'macOS 14.0 Sonoma 이상 · Apple Silicon & Intel',
   },
 
@@ -83,16 +83,14 @@ export const ko = {
   download: {
     title1: '무료로 설치하고',
     title2: '바로 시작해보세요',
-    cta: 'macOS용 CLIX 다운로드',
+    cta: '공개 배포 준비 중',
     req: 'macOS 14.0 Sonoma 이상 · Apple Silicon & Intel',
-    releases: '다른 버전은 GitHub Releases에서 보기 →',
+    releases: '배포 링크는 공개 시 이 페이지에서 제공됩니다.',
   },
 
   // Footer
   footer: {
     links: {
-      github: 'GitHub',
-      releases: 'Releases',
       privacy: '개인정보처리방침',
     },
     copyright: '© 2026 CLIX. All rights reserved.',

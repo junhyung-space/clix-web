@@ -2,14 +2,14 @@ import type { Translations } from './ko';
 
 export const en: Translations = {
   nav: {
-    download: 'Download',
+    download: 'Coming Soon',
   },
 
   hero: {
     headline1: 'SSH terminal,',
     headline2: 'built for AI coding tools.',
     sub: 'A macOS SSH workspace app for developers using Claude Code, Codex, and Gemini CLI.',
-    cta: 'Download for macOS — Free',
+    cta: 'Public release coming soon',
     meta: 'macOS 14.0 Sonoma or later · Apple Silicon & Intel',
   },
 
@@ -78,15 +78,13 @@ export const en: Translations = {
   download: {
     title1: 'Install for free,',
     title2: 'start right away.',
-    cta: 'Download CLIX for macOS',
+    cta: 'Public release coming soon',
     req: 'macOS 14.0 Sonoma or later · Apple Silicon & Intel',
-    releases: 'View other releases on GitHub Releases →',
+    releases: 'The public download link will be available on this page.',
   },
 
   footer: {
     links: {
-      github: 'GitHub',
-      releases: 'Releases',
       privacy: 'Privacy Policy',
     },
     copyright: '© 2026 CLIX. All rights reserved.',

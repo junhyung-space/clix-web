@@ -1,19 +1,16 @@
----
-const DOWNLOAD_URL =
-  'https://github.com/junhyung-space/clix/releases/latest/download/clix.dmg';
----
-
 <nav
   class="sticky top-0 z-50 flex items-center justify-between px-16 py-4
          bg-bg-primary/90 border-b border-blue-muted/10 backdrop-blur-xl"
 >
   <!-- Logo -->
   <a href="#" class="flex items-center gap-2.5 no-underline">
-    <img
-      src="/icon.png"
-      alt="CLIX"
-      class="w-8 h-8 rounded-lg"
-    />
+    <div class="w-8 h-8 rounded-lg overflow-hidden">
+      <img
+        src="/icon.png"
+        alt="CLIX"
+        class="w-full h-full object-cover scale-[1.42]"
+      />
+    </div>
     <span class="font-extrabold text-base tracking-[3px] text-text-primary">
       CLIX
     </span>
@@ -30,13 +27,12 @@ const DOWNLOAD_URL =
       KO / EN
     </button>
 
-    <a
-      href={DOWNLOAD_URL}
+    <span
       class="btn-primary text-white text-sm font-semibold
-             px-4 py-2 rounded-lg transition-all duration-200"
+             px-4 py-2 rounded-lg opacity-70 select-none"
       data-i18n="nav.download"
     >
-      다운로드
-    </a>
+      출시 예정
+    </span>
   </div>
 </nav>

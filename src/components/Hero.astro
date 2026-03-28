@@ -1,20 +1,19 @@
----
-const DOWNLOAD_URL =
-  'https://github.com/junhyung-space/clix/releases/latest/download/clix.dmg';
----
-
 <section
   class="relative min-h-screen flex flex-col items-center justify-center
          px-8 pb-20 pt-24 text-center overflow-hidden"
   style="background: radial-gradient(ellipse 90% 65% at 50% -10%, rgba(30,64,175,0.4) 0%, transparent 65%), radial-gradient(ellipse 40% 30% at 85% 90%, rgba(14,165,233,0.1) 0%, transparent 50%), #0a0e1a;"
 >
   <!-- App Icon -->
-  <img
-    src="/icon.png"
-    alt="CLIX App Icon"
-    class="w-24 h-24 rounded-[22px] mb-9"
+  <div
+    class="w-24 h-24 rounded-[22px] overflow-hidden mb-9"
     style="box-shadow: 0 0 80px rgba(14,165,233,0.22), 0 20px 60px rgba(0,0,0,0.4);"
-  />
+  >
+    <img
+      src="/icon.png"
+      alt="CLIX App Icon"
+      class="w-full h-full object-cover scale-[1.42]"
+    />
+  </div>
 
   <!-- Headline -->
   <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.02] mb-6">
@@ -49,14 +48,13 @@ const DOWNLOAD_URL =
   </div>
 
   <!-- CTA -->
-  <a
-    href={DOWNLOAD_URL}
+  <span
     class="btn-primary inline-flex items-center gap-2 text-white
-           text-base font-bold px-9 py-4 rounded-xl transition-all duration-200 mb-5"
+           text-base font-bold px-9 py-4 rounded-xl opacity-70 select-none mb-5"
     data-i18n="hero.cta"
   >
-    macOS용 무료 다운로드
-  </a>
+    공개 배포 준비 중
+  </span>
 
   <!-- Meta -->
   <p

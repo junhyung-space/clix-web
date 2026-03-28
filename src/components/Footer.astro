@@ -1,6 +1,4 @@
 ---
-const GITHUB_URL = 'https://github.com/junhyung-space/clix';
-const RELEASES_URL = 'https://github.com/junhyung-space/clix/releases';
 const CONTACT_EMAIL = 'junhyung.lee@genesisnest.com';
 ---
 
@@ -11,22 +9,14 @@ const CONTACT_EMAIL = 'junhyung.lee@genesisnest.com';
 
     <!-- Logo -->
     <a href="#" class="flex items-center gap-2 no-underline">
-      <img src="/icon.png" alt="CLIX" class="w-5 h-5 rounded" />
+      <div class="w-5 h-5 rounded overflow-hidden">
+        <img src="/icon.png" alt="CLIX" class="w-full h-full object-cover scale-[1.42]" />
+      </div>
       <span class="text-xs font-bold tracking-[2px] text-text-darkest">CLIX</span>
     </a>
 
     <!-- Links -->
     <div class="flex items-center gap-6 flex-wrap justify-center">
-      <a
-        href={GITHUB_URL}
-        class="text-xs text-text-darkest hover:text-text-muted transition-colors"
-        data-i18n="footer.links.github"
-      >GitHub</a>
-      <a
-        href={RELEASES_URL}
-        class="text-xs text-text-darkest hover:text-text-muted transition-colors"
-        data-i18n="footer.links.releases"
-      >Releases</a>
       <a
         href="#"
         class="text-xs text-text-darkest hover:text-text-muted transition-colors"
