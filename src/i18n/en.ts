@@ -6,19 +6,18 @@ export const en: Translations = {
   },
 
   hero: {
-    badge: 'macOS only · v0.1.0 Early Access',
-    headline1: 'SSH, reimagined',
-    headline2: 'for the AI era.',
-    sub: 'The macOS terminal workspace built for developers working with AI coding tools.',
+    headline1: 'SSH terminal,',
+    headline2: 'built for AI coding tools.',
+    sub: 'A macOS SSH client made for developers using Claude Code, Codex, and Gemini CLI.',
     cta: 'Download for macOS — Free',
-    meta: 'Requires macOS 14.0 Sonoma or later · Apple Silicon & Intel',
+    meta: 'macOS 14.0 Sonoma or later · Apple Silicon & Intel',
   },
 
   ai: {
     label: 'AI Integration',
-    title1: 'Deeply integrated',
-    title2: 'with AI coding tools.',
-    sub: 'Auto-configured hooks, real-time notifications, session handoff — works out of the box.',
+    title1: 'AI tool hooks,',
+    title2: 'configured automatically.',
+    sub: 'On first launch, CLIX auto-configures hooks for Claude Code, Codex, and Gemini CLI.',
     card1: {
       title: 'Zero-config AI setup',
       desc: 'On first launch, CLIX automatically finds and configures hooks for Claude Code, Codex, and Gemini CLI. No manual setup required.',
@@ -39,9 +38,9 @@ export const en: Translations = {
 
   workspace: {
     label: 'Terminal Workspace',
-    title1: 'Complex workflows,',
-    title2: 'one screen.',
-    sub: 'Multi-tab, split panes, session recovery — powered by the Ghostty terminal engine.',
+    title1: 'Multi-pane terminal',
+    title2: 'and workspace recovery.',
+    sub: 'Work across multiple servers at once. Restart and everything comes back exactly as you left it.',
     feat1Title: 'Multi-tab & split panes',
     feat1Desc: 'Manage multiple server sessions side-by-side with tabs and horizontal/vertical splits.',
     feat2Title: 'Workspace recovery',
@@ -52,9 +51,9 @@ export const en: Translations = {
 
   ssh: {
     label: 'SSH Management',
-    title1: 'All your servers,',
-    title2: 'one place.',
-    sub: 'Hosts, credentials, routing, and port forwarding — all in one workspace.',
+    title1: 'Servers and credentials,',
+    title2: 'all in one place.',
+    sub: 'Hosts, SSH keys, jump hosts, and port forwarding — all in one place.',
     card1Title: 'Host collections',
     card1Desc: 'Organize servers into Production, Staging, Personal groups. Find any host instantly with tags, favorites, and recent connections.',
     card2Title: 'Credentials & Keychain',
@@ -77,12 +76,11 @@ export const en: Translations = {
   },
 
   download: {
-    title1: 'Download and',
-    title2: 'start free.',
-    sub: 'Get the latest release from GitHub Releases.',
+    title1: 'Install for free,',
+    title2: 'start right away.',
     cta: 'Download CLIX for macOS',
-    req: 'Requires macOS 14.0 Sonoma or later · Apple Silicon & Intel',
-    releases: 'View all releases on GitHub →',
+    req: 'macOS 14.0 Sonoma or later · Apple Silicon & Intel',
+    releases: 'View other releases on GitHub Releases →',
   },
 
   footer: {
