@@ -1,1 +1,62 @@
-<section>SSHManagement</section>
+---
+const cards = [
+  { icon: '🗄', titleKey: 'ssh.card1Title', descKey: 'ssh.card1Desc',
+    titleDefault: '호스트 컬렉션',
+    descDefault: '서버를 Production, Staging, Personal 등 컬렉션으로 분류. 태그, 즐겨찾기, 최근 연결로 빠르게 찾아요.' },
+  { icon: '🔐', titleKey: 'ssh.card2Title', descKey: 'ssh.card2Desc',
+    titleDefault: '자격증명 & Keychain',
+    descDefault: 'SSH 키, PEM 파일, 비밀번호를 macOS Keychain에 안전하게 보관. 평문 저장 없음.' },
+  { icon: '🔀', titleKey: 'ssh.card3Title', descKey: 'ssh.card3Desc',
+    titleDefault: '점프 호스트 라우팅',
+    descDefault: '배스천 서버를 경유해 내부 서버에 원클릭 연결. 복잡한 네트워크 구조도 간단하게.' },
+  { icon: '🚇', titleKey: 'ssh.card4Title', descKey: 'ssh.card4Desc',
+    titleDefault: '포트 포워딩',
+    descDefault: '로컬, 리모트, 다이나믹(SOCKS) 포워딩을 UI에서 설정·관리. 충돌 감지 자동 포함.' },
+  { icon: '📦', titleKey: 'ssh.card5Title', descKey: 'ssh.card5Desc',
+    titleDefault: '백업 & 복구',
+    descDefault: '호스트, 자격증명, 라우트 설정을 JSON으로 내보내고 복원. 팀 간 공유에도 활용.' },
+  { icon: '🔍', titleKey: 'ssh.card6Title', descKey: 'ssh.card6Desc',
+    titleDefault: '통합 검색',
+    descDefault: '별칭, 호스트명, 태그, 메모를 가로질러 모든 호스트를 즉시 검색.' },
+];
+---
+
+<section
+  class="px-16 py-24 border-t border-white/[0.04]"
+  style="background: #080c14;"
+>
+  <!-- Header -->
+  <div class="text-center mb-14">
+    <span
+      class="inline-block bg-blue-muted/15 border border-blue-muted/30 text-blue-accent
+             text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
+      data-i18n="ssh.label"
+    >SSH Management</span>
+    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+      <span class="grad-text" data-i18n="ssh.title1">모든 서버를</span>
+      <br />
+      <span class="grad-text" data-i18n="ssh.title2">한 곳에서 관리</span>
+    </h2>
+    <p class="text-text-muted text-base mt-3" data-i18n="ssh.sub">
+      호스트, 자격증명, 라우팅, 포트 포워딩까지
+    </p>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+    {cards.map(c => (
+      <div
+        class="bg-white/[0.02] border border-white/[0.06] rounded-2xl p-7
+               hover:border-blue-muted/20 transition-colors duration-200"
+      >
+        <div class="text-2xl mb-3.5">{c.icon}</div>
+        <h3 class="text-base font-bold text-text-primary mb-2" data-i18n={c.titleKey}>
+          {c.titleDefault}
+        </h3>
+        <p class="text-xs text-text-muted leading-relaxed" data-i18n={c.descKey}>
+          {c.descDefault}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
