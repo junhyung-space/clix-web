@@ -1,0 +1,32 @@
+---
+---
+<div id="workspace" class="guide-section">
+  <p
+    class="text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase mb-2.5"
+    data-i18n="guide.workspace.label"
+  >터미널 워크스페이스</p>
+  <h2
+    class="text-3xl font-extrabold text-text-primary tracking-tight mb-3"
+    data-i18n="guide.workspace.title"
+  >탭과 분할 패인</h2>
+  <p
+    class="text-sm text-text-muted leading-relaxed mb-8"
+    data-i18n="guide.workspace.sub"
+  >여러 서버를 한 화면에서 보며 작업하고, 재시작해도 그 상태 그대로 돌아옵니다.</p>
+
+  <div class="flex flex-col gap-5">
+    {[
+      { titleKey: 'guide.workspace.tabTitle', descKey: 'guide.workspace.tabDesc',
+        titleDefault: '탭 생성 & 전환', descDefault: '상단 탭 바에서 새 탭을 열거나 기존 탭을 전환합니다. 각 탭은 독립적인 SSH 세션을 유지합니다.' },
+      { titleKey: 'guide.workspace.paneTitle', descKey: 'guide.workspace.paneDesc',
+        titleDefault: '패인 분할', descDefault: '탭을 가로 또는 세로로 분할해 여러 세션을 한 화면에서 볼 수 있습니다.' },
+      { titleKey: 'guide.workspace.recoveryTitle', descKey: 'guide.workspace.recoveryDesc',
+        titleDefault: '워크스페이스 복구', descDefault: '앱을 다시 실행하면 마지막으로 열려 있던 탭과 작업 디렉토리를 자동으로 복구합니다.' },
+    ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+      <div class="bg-white/[0.02] border border-blue-muted/[0.14] rounded-xl p-5">
+        <h3 class="text-sm font-bold text-text-primary mb-2" data-i18n={titleKey}>{titleDefault}</h3>
+        <p class="text-xs text-text-muted leading-relaxed" data-i18n={descKey}>{descDefault}</p>
+      </div>
+    ))}
+  </div>
+</div>
