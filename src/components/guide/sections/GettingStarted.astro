@@ -12,17 +12,19 @@
   <p
     class="text-sm text-text-muted leading-relaxed mb-8"
     data-i18n="guide.gettingStarted.sub"
-  >CLIX를 설치하고 첫 번째 서버에 접속하는 방법을 안내합니다. 셸 통합은 앱 실행 시 자동으로 설정됩니다.</p>
+  >CLIX를 설치하고 첫 서버에 연결하는 순서를 안내합니다. CLIX는 현재 Apple Developer ID 서명 없이 배포되므로, 처음 실행할 때 macOS 보안 설정에서 실행을 허용해야 할 수 있습니다.</p>
 
   <!-- Steps -->
   <div class="flex flex-col gap-4 mb-8">
     {[
       { num: 1, titleKey: 'guide.gettingStarted.step1Title', descKey: 'guide.gettingStarted.step1Desc',
-        titleDefault: 'DMG 파일 다운로드', descDefault: '다운로드 페이지에서 최신 버전의 clix.dmg를 받아 앱 폴더에 설치합니다.' },
+        titleDefault: 'DMG 파일 다운로드', descDefault: '다운로드 페이지에서 최신 버전의 clix.dmg를 내려받아 Applications 폴더로 옮깁니다.' },
       { num: 2, titleKey: 'guide.gettingStarted.step2Title', descKey: 'guide.gettingStarted.step2Desc',
-        titleDefault: '앱 실행 → 셸 통합 자동 설정', descDefault: '처음 실행하면 shell-integration.zsh 설치 여부를 묻습니다.' },
+        titleDefault: 'macOS에서 첫 실행 허용', descDefault: 'macOS가 앱 실행을 차단하면 Finder에서 CLIX를 우클릭한 뒤 열기를 선택하세요. 그래도 실행되지 않으면 시스템 설정 → 개인정보 보호 및 보안으로 이동한 뒤, 화면 하단의 차단 안내 옆에서 CLIX 실행을 허용합니다.' },
       { num: 3, titleKey: 'guide.gettingStarted.step3Title', descKey: 'guide.gettingStarted.step3Desc',
-        titleDefault: '첫 번째 호스트 추가', descDefault: '사이드바 하단 + 버튼을 눌러 호스트 정보를 입력합니다.' },
+        titleDefault: '셸 통합 설정', descDefault: '처음 실행하면 셸 통합 스크립트 설치를 안내합니다. 허용하면 clix-notify, clix-handoff, clix-sessions가 자동으로 등록됩니다.' },
+      { num: 4, titleKey: 'guide.gettingStarted.step4Title', descKey: 'guide.gettingStarted.step4Desc',
+        titleDefault: '첫 번째 호스트 추가', descDefault: '사이드바 하단의 + 버튼을 눌러 호스트 정보를 입력하고 저장합니다. 저장 후 클릭하면 바로 연결됩니다.' },
     ].map(({ num, titleKey, descKey, titleDefault, descDefault }) => (
       <div class="flex gap-4 items-start bg-white/[0.02] border border-blue-muted/[0.14] rounded-xl p-4">
         <div class="w-6 h-6 rounded-full bg-blue-deep/20 border border-blue-muted/30 text-blue-accent text-[11px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -36,11 +38,23 @@
     ))}
   </div>
 
+  <!-- Unsigned note -->
+  <div class="bg-white/[0.02] border border-blue-muted/[0.14] rounded-xl p-4 mb-6">
+    <p class="text-xs font-semibold text-text-primary mb-1.5" data-i18n="guide.gettingStarted.securityTitle">서명 없는 앱 설치 안내</p>
+    <p class="text-xs text-text-muted leading-relaxed mb-3" data-i18n="guide.gettingStarted.securityDesc">
+      CLIX는 현재 Apple Developer ID 서명 없이 배포됩니다. 처음 실행 시 macOS가 앱을 차단하면 Finder에서 우클릭 후 열기를 시도하고, 그래도 차단되면 시스템 설정 → 개인정보 보호 및 보안으로 이동해 화면 하단의 차단 안내 옆에서 CLIX 실행을 허용하세요. 한 번 허용하면 이후에는 일반 앱처럼 실행할 수 있습니다.
+    </p>
+    <div class="bg-[#0d1117] border border-blue-muted/20 rounded-lg p-4 font-mono text-xs">
+      <div class="text-text-darkest"># Gatekeeper 경고가 계속 남아 있으면</div>
+      <div class="text-green-500 mt-1">$ xattr -cr /Applications/CLIX.app</div>
+    </div>
+  </div>
+
   <!-- Tip -->
   <div class="bg-blue-deep/[0.06] border border-blue-muted/20 rounded-xl p-4 mb-6">
     <p class="text-xs font-semibold text-blue-accent mb-1" data-i18n="guide.gettingStarted.tipTitle">셸 통합 확인하기</p>
     <p class="text-xs text-blue-muted/90 leading-relaxed" data-i18n="guide.gettingStarted.tipDesc">
-      터미널에서 clix-notify "테스트"를 실행해보세요. CLIX 앱에 알림이 오면 정상입니다.
+      터미널에서 clix-notify "테스트"를 실행해보세요. CLIX에 알림이 표시되면 정상입니다.
     </p>
   </div>
 

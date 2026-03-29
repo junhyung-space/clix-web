@@ -8,20 +8,20 @@
   <h2
     class="text-3xl font-extrabold text-text-primary tracking-tight mb-3"
     data-i18n="guide.portForwarding.title"
-  >포트 포워딩 설정</h2>
+  >포트 포워딩</h2>
   <p
     class="text-sm text-text-muted leading-relaxed mb-8"
     data-i18n="guide.portForwarding.sub"
-  >로컬, 리모트, 다이나믹(SOCKS) 포워딩 규칙을 UI에서 간단하게 설정합니다.</p>
+  >로컬, 리모트, 다이나믹(SOCKS) 포워딩 규칙을 UI에서 설정하고 관리할 수 있습니다.</p>
 
   <div class="flex flex-col gap-5">
     {[
       { titleKey: 'guide.portForwarding.typesTitle', descKey: 'guide.portForwarding.typesDesc',
         titleDefault: '포워딩 종류',
-        descDefault: '로컬(Local): 원격 포트를 로컬로 포워딩 · 리모트(Remote): 로컬 포트를 원격으로 노출 · 다이나믹(SOCKS): SOCKS5 프록시' },
+        descDefault: '로컬(Local)은 원격 포트를 로컬로 전달하고, 리모트(Remote)는 로컬 포트를 원격에 노출하며, 다이나믹(SOCKS)은 SOCKS5 프록시를 만듭니다.' },
       { titleKey: 'guide.portForwarding.createTitle', descKey: 'guide.portForwarding.createDesc',
         titleDefault: '규칙 만들기',
-        descDefault: '호스트 편집 → Port Forwarding 탭 → + 버튼으로 규칙을 추가합니다. 포트 충돌은 자동으로 감지됩니다.' },
+        descDefault: '호스트 편집의 Port Forwarding 탭에서 + 버튼을 눌러 규칙을 추가합니다. CLIX가 포트 충돌을 자동으로 감지합니다.' },
       { titleKey: 'guide.portForwarding.autoStartTitle', descKey: 'guide.portForwarding.autoStartDesc',
         titleDefault: '자동 시작',
         descDefault: '규칙에 자동 시작을 켜두면 호스트에 연결할 때 포워딩이 자동으로 시작됩니다.' },

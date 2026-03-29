@@ -4,26 +4,26 @@
   <p
     class="text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase mb-2.5"
     data-i18n="guide.ssh.label"
-  >호스트 & SSH 관리</p>
+  >호스트와 SSH</p>
   <h2
     class="text-3xl font-extrabold text-text-primary tracking-tight mb-3"
     data-i18n="guide.ssh.title"
-  >호스트와 자격증명 관리</h2>
+  >호스트와 자격증명</h2>
   <p
     class="text-sm text-text-muted leading-relaxed mb-8"
     data-i18n="guide.ssh.sub"
-  >호스트, SSH 키, 점프 호스트, 컬렉션까지 한 곳에서 관리합니다.</p>
+  >호스트, SSH 키, 점프 호스트, 태그와 즐겨찾기를 한 곳에서 관리합니다.</p>
 
   <div class="flex flex-col gap-5">
     {[
       { titleKey: 'guide.ssh.addHostTitle', descKey: 'guide.ssh.addHostDesc',
-        titleDefault: '호스트 추가', descDefault: '사이드바 하단 + 버튼 → 호스트명, IP, 포트, 사용자명을 입력합니다. 자격증명은 SSH 키 또는 비밀번호로 설정할 수 있습니다.' },
+        titleDefault: '호스트 추가', descDefault: '사이드바 하단의 + 버튼을 누른 뒤 호스트명, IP, 포트, 사용자명을 입력합니다. 인증 방식은 SSH 키 또는 비밀번호를 선택할 수 있습니다.' },
       { titleKey: 'guide.ssh.credTitle', descKey: 'guide.ssh.credDesc',
-        titleDefault: 'SSH 키 & 자격증명', descDefault: 'SSH 키와 PEM 파일은 macOS Keychain에 안전하게 저장됩니다. 자격증명 뷰에서 한 번에 관리할 수 있습니다.' },
+        titleDefault: 'SSH 키와 자격증명', descDefault: 'SSH 키와 PEM 파일은 macOS Keychain에 안전하게 저장됩니다. 자격증명 화면에서 한곳에서 관리할 수 있습니다.' },
       { titleKey: 'guide.ssh.jumpTitle', descKey: 'guide.ssh.jumpDesc',
-        titleDefault: '점프 호스트', descDefault: '배스천 서버를 거쳐 내부 서버에 접속하는 경로를 미리 설정합니다. 호스트 편집 → Route 탭에서 설정합니다.' },
+        titleDefault: '점프 호스트', descDefault: '배스천 서버를 거쳐 내부 서버에 접속하는 경로를 미리 설정할 수 있습니다. 호스트 편집의 Route 탭에서 설정합니다.' },
       { titleKey: 'guide.ssh.collectionsTitle', descKey: 'guide.ssh.collectionsDesc',
-        titleDefault: '컬렉션 & 검색', descDefault: '서버를 Production, Staging, Personal 그룹으로 나누고 태그와 즐겨찾기를 활용합니다. 별칭, 호스트명, 태그를 통합 검색할 수 있습니다.' },
+        titleDefault: '그룹, 태그, 검색', descDefault: '서버를 Production, Staging, Personal 같은 그룹으로 나누고 태그와 즐겨찾기로 빠르게 찾을 수 있습니다. 별칭, 호스트명, 태그를 한 번에 검색할 수 있습니다.' },
     ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
       <div class="bg-white/[0.02] border border-blue-muted/[0.14] rounded-xl p-5">
         <h3 class="text-sm font-bold text-text-primary mb-2" data-i18n={titleKey}>{titleDefault}</h3>

@@ -13,11 +13,11 @@
   <!-- Getting Started -->
   <button
     data-section="getting-started"
-    class="guide-sidebar-item w-full flex items-center gap-2 px-5 py-[7px] text-[12.5px]
+    class="guide-sidebar-item w-full flex items-center gap-2.5 px-5 py-[7px] text-[12.5px]
            text-text-muted text-left border-l-2 border-transparent
            hover:text-text-secondary hover:bg-white/[0.03] transition-colors duration-150"
   >
-    <span class="w-[18px] text-center text-sm">🚀</span>
+    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-70 flex-shrink-0"></span>
     <span data-i18n="guide.sidebar.gettingStarted">시작하기</span>
   </button>
 
@@ -32,19 +32,19 @@
 
   <!-- Feature items -->
   {[
-    { section: 'ai-integration',  icon: '🤖', key: 'guide.sidebar.ai',             defaultText: 'AI 도구 연동' },
-    { section: 'workspace',       icon: '🖥',  key: 'guide.sidebar.workspace',      defaultText: '터미널 워크스페이스' },
-    { section: 'ssh',             icon: '🔐', key: 'guide.sidebar.ssh',            defaultText: '호스트 & SSH 관리' },
-    { section: 'port-forwarding', icon: '🚇', key: 'guide.sidebar.portForwarding', defaultText: '포트 포워딩' },
-    { section: 'backup',          icon: '📦', key: 'guide.sidebar.backup',         defaultText: '백업 & 복원' },
-  ].map(({ section, icon, key, defaultText }) => (
+    { section: 'ai-integration', key: 'guide.sidebar.ai',             defaultText: 'AI 도구 연동' },
+    { section: 'workspace',      key: 'guide.sidebar.workspace',      defaultText: '워크스페이스' },
+    { section: 'ssh',            key: 'guide.sidebar.ssh',            defaultText: '호스트와 SSH' },
+    { section: 'port-forwarding',key: 'guide.sidebar.portForwarding', defaultText: '포트 포워딩' },
+    { section: 'backup',         key: 'guide.sidebar.backup',         defaultText: '백업과 복원' },
+  ].map(({ section, key, defaultText }) => (
     <button
       data-section={section}
-      class="guide-sidebar-item w-full flex items-center gap-2 px-5 py-[7px] text-[12.5px]
+      class="guide-sidebar-item w-full flex items-center gap-2.5 px-5 py-[7px] text-[12.5px]
              text-text-muted text-left border-l-2 border-transparent
              hover:text-text-secondary hover:bg-white/[0.03] transition-colors duration-150"
     >
-      <span class="w-[18px] text-center text-sm">{icon}</span>
+      <span class="w-1.5 h-1.5 rounded-full bg-current opacity-70 flex-shrink-0"></span>
       <span data-i18n={key}>{defaultText}</span>
     </button>
   ))}
@@ -60,11 +60,11 @@
 
   <button
     data-section="settings"
-    class="guide-sidebar-item w-full flex items-center gap-2 px-5 py-[7px] text-[12.5px]
+    class="guide-sidebar-item w-full flex items-center gap-2.5 px-5 py-[7px] text-[12.5px]
            text-text-muted text-left border-l-2 border-transparent
            hover:text-text-secondary hover:bg-white/[0.03] transition-colors duration-150"
   >
-    <span class="w-[18px] text-center text-sm">⚙️</span>
+    <span class="w-1.5 h-1.5 rounded-full bg-current opacity-70 flex-shrink-0"></span>
     <span data-i18n="guide.sidebar.settings">설정</span>
   </button>
 </aside>
