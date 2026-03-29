@@ -7,9 +7,9 @@ export const ko = {
 
   // Hero
   hero: {
-    headline1: 'SSH 작업을 더 자연스럽게',
-    headline2: 'AI 코딩 도구와 함께',
-    sub: 'Claude Code, Codex, Gemini CLI와 함께 쓰기 좋은 macOS SSH 워크스페이스 앱',
+    headline1: 'SSH 연결부터',
+    headline2: 'AI 작업까지 한곳에서',
+    sub: 'SSH 호스트 관리, 포트 포워딩, AI CLI 작업 흐름을 지원하는 macOS 앱',
     cta: '공개 배포 준비 중',
     meta: 'macOS 14.0 Sonoma 이상 · Apple Silicon & Intel',
   },

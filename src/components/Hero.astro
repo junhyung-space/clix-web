@@ -1,33 +1,33 @@
 <section
-  class="relative min-h-screen flex flex-col items-center justify-center
-         px-8 pb-20 pt-24 text-center overflow-hidden"
+  class="relative flex min-h-[calc(100svh-108px)] flex-col items-center justify-center
+         overflow-hidden px-4 pb-16 pt-16 text-center sm:px-6 sm:pb-20 sm:pt-20
+         md:min-h-[calc(100svh-86px)] md:px-8 md:pt-24"
   style="background: radial-gradient(ellipse 90% 65% at 50% -10%, rgba(30,64,175,0.4) 0%, transparent 65%), radial-gradient(ellipse 40% 30% at 85% 90%, rgba(14,165,233,0.1) 0%, transparent 50%), #0a0e1a;"
 >
   <!-- Headline -->
-  <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.02] mb-6">
-    <span class="grad-text" data-i18n="hero.headline1">SSH 작업을 더 자연스럽게</span>
-    <br />
-    <span class="grad-text" data-i18n="hero.headline2">AI 코딩 도구와 함께</span>
+  <h1 class="hero-title mb-6">
+    <span class="grad-text block" data-i18n="hero.headline1">SSH 연결부터</span>
+    <span class="grad-text block" data-i18n="hero.headline2">AI 작업까지 한곳에서</span>
   </h1>
 
   <!-- Sub -->
   <p
-    class="text-sm sm:text-base md:text-lg text-text-secondary max-w-none whitespace-nowrap leading-relaxed mb-12"
+    class="hero-copy mb-10 px-1 md:mb-12"
     data-i18n="hero.sub"
   >
-    Claude Code, Codex, Gemini CLI와 함께 쓰기 좋은 macOS SSH 워크스페이스 앱
+    SSH 호스트 관리, 포트 포워딩, AI CLI 작업 흐름을 지원하는 macOS 앱
   </p>
 
   <!-- AI Tool Badges -->
-  <div class="flex gap-2.5 justify-center mb-12 flex-wrap">
+  <div class="mb-10 flex flex-wrap justify-center gap-2.5 md:mb-12">
     {[
       { name: 'Claude Code', color: '#f97316' },
       { name: 'Codex', color: '#8b5cf6' },
       { name: 'Gemini CLI', color: '#06b6d4' },
     ].map(({ name, color }) => (
       <div
-        class="flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.08]
-               rounded-lg px-3.5 py-1.5 text-xs text-text-muted"
+        class="flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-white/[0.03]
+               px-3 py-1.5 text-xs text-text-muted sm:px-3.5"
       >
         <span class="w-2 h-2 rounded-full" style={`background:${color}`}></span>
         {name}
@@ -38,7 +38,8 @@
   <!-- CTA -->
   <span
     class="btn-primary inline-flex items-center gap-2 text-white
-           text-base font-bold px-9 py-4 rounded-xl opacity-70 select-none mb-5"
+           mb-5 rounded-xl px-7 py-3.5 text-sm font-bold opacity-70 select-none
+           sm:px-9 sm:py-4 sm:text-base"
     data-i18n="hero.cta"
   >
     공개 배포 준비 중

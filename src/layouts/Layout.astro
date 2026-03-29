@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  title = 'CLIX — AI 코딩 도구와 함께 쓰기 좋은 macOS SSH 워크스페이스 앱',
-  description = 'Claude Code, Codex, Gemini CLI와 함께 쓰기 좋은 macOS SSH 워크스페이스 앱입니다.',
+  title = 'CLIX — SSH 호스트 관리, 포트 포워딩, AI CLI 작업 흐름을 지원하는 macOS 앱',
+  description = 'SSH 호스트 관리, 포트 포워딩, AI CLI 작업 흐름을 한곳에서 지원하는 macOS 앱입니다.',
 } = Astro.props;
 ---
 
@@ -50,17 +50,23 @@ const {
         });
         document.documentElement.lang = lang;
         localStorage.setItem('clix-lang', lang);
+        updateLangToggle(lang);
+      }
 
-        // Update toggle button
+      function updateLangToggle(lang: Lang) {
         const toggle = document.getElementById('lang-toggle');
-        if (toggle) toggle.textContent = lang === 'ko' ? 'KO / EN' : 'EN / KO';
+        if (!toggle) return;
+
+        const label = document.getElementById('lang-toggle-label');
+        if (label) label.textContent = lang === 'ko' ? '한국어' : 'English';
+        toggle.setAttribute('aria-label', lang === 'ko' ? 'Switch language to English' : 'Switch language to Korean');
+        toggle.setAttribute('title', lang === 'ko' ? 'English로 전환' : 'Switch to Korean');
       }
 
       // Init on load
       const currentLang = detectLang();
       applyLang(currentLang);
 
-      // Toggle on click
       document.getElementById('lang-toggle')?.addEventListener('click', () => {
         const next: Lang =
           (localStorage.getItem('clix-lang') as Lang) === 'ko' ? 'en' : 'ko';
@@ -71,8 +77,95 @@ const {
 </html>
 
 <style is:global>
+  :root {
+    --section-px: clamp(1rem, 2.8vw, 4rem);
+    --section-py: clamp(4rem, 8vw, 6rem);
+    --content-max: 72rem;
+    --copy-max: 42rem;
+    --title-fluid-lg: clamp(2rem, 5vw, 3.5rem);
+    --title-fluid-md: clamp(1.875rem, 4vw, 3rem);
+    --title-fluid-sm: clamp(1.75rem, 3vw, 2.25rem);
+    --body-fluid: clamp(0.95rem, 1.5vw, 1.0625rem);
+  }
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .section-shell {
+    padding-inline: var(--section-px);
+    padding-block: var(--section-py);
+  }
+  .section-inner {
+    width: min(100%, var(--content-max));
+    margin-inline: auto;
+  }
+  .section-kicker {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    background: rgba(37, 99, 235, 0.12);
+    padding: 0.125rem 0.625rem;
+    color: #60a5fa;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-size: var(--title-fluid-md);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+  }
+  .section-copy {
+    width: min(100%, var(--copy-max));
+    margin-inline: auto;
+    font-size: var(--body-fluid);
+    line-height: 1.7;
+    color: rgb(148 163 184 / 0.95);
+  }
+  .hero-title {
+    max-width: min(100%, 18rem);
+    margin-inline: auto;
+    font-size: clamp(2.35rem, 8.8vw, 6rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    text-wrap: balance;
+  }
+  .hero-copy {
+    width: min(100%, 34rem);
+    margin-inline: auto;
+    font-size: clamp(1rem, 3.9vw, 1.125rem);
+    line-height: 1.65;
+    color: rgb(148 163 184 / 0.95);
+    text-wrap: pretty;
+  }
+  .panel-card {
+    border-radius: 1rem;
+    border: 1px solid rgba(96, 165, 250, 0.14);
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .guide-shell {
+    width: min(100%, 48rem);
+  }
+  .guide-kicker {
+    margin-bottom: 0.75rem;
+  }
+  .guide-title {
+    margin-bottom: 0.75rem;
+    font-size: var(--title-fluid-sm);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: rgb(241 245 249);
+  }
+  .guide-copy {
+    margin-bottom: 2rem;
+    max-width: 42rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgb(148 163 184 / 0.95);
   }
   .grad-text {
     background: linear-gradient(160deg, #f8fafc 30%, #93c5fd 100%);
@@ -94,5 +187,23 @@ const {
     top: 0; left: 0; right: 0;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(59,130,246,0.4), transparent);
+  }
+  @media (max-width: 1023px) {
+    .guide-mobile-scroll {
+      scrollbar-width: none;
+    }
+    .guide-mobile-scroll::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  @media (min-width: 640px) {
+    .hero-title {
+      max-width: min(100%, 30rem);
+    }
+  }
+  @media (min-width: 1024px) {
+    .hero-title {
+      max-width: min(100%, 56rem);
+    }
   }
 </style>

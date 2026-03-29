@@ -1,54 +1,58 @@
 ---
+import SectionIconBadge from './SectionIconBadge.astro';
+
 const cards = [
-  { icon: '🗄', titleKey: 'ssh.card1Title', descKey: 'ssh.card1Desc',
+  { icon: 'collection', titleKey: 'ssh.card1Title', descKey: 'ssh.card1Desc',
     titleDefault: '호스트 컬렉션',
     descDefault: '서버를 Production, Staging, Personal 같은 그룹으로 나누고 태그, 즐겨찾기, 최근 연결로 빠르게 찾을 수 있습니다.' },
-  { icon: '🔐', titleKey: 'ssh.card2Title', descKey: 'ssh.card2Desc',
+  { icon: 'key', titleKey: 'ssh.card2Title', descKey: 'ssh.card2Desc',
     titleDefault: '자격증명 & Keychain',
     descDefault: 'SSH 키, PEM 파일, 비밀번호를 macOS Keychain에 저장합니다. 평문으로 저장하지 않습니다.' },
-  { icon: '🔀', titleKey: 'ssh.card3Title', descKey: 'ssh.card3Desc',
+  { icon: 'network', titleKey: 'ssh.card3Title', descKey: 'ssh.card3Desc',
     titleDefault: '점프 호스트 라우팅',
     descDefault: '배스천 서버를 거쳐 내부 서버에 연결할 수 있습니다. 복잡한 네트워크도 미리 설정해두면 간편합니다.' },
-  { icon: '🚇', titleKey: 'ssh.card4Title', descKey: 'ssh.card4Desc',
+  { icon: 'tunnel', titleKey: 'ssh.card4Title', descKey: 'ssh.card4Desc',
     titleDefault: '포트 포워딩',
     descDefault: '로컬, 리모트, 다이나믹(SOCKS) 포워딩을 UI에서 설정하고 관리합니다. 포트 충돌도 자동으로 감지합니다.' },
-  { icon: '📦', titleKey: 'ssh.card5Title', descKey: 'ssh.card5Desc',
+  { icon: 'archive', titleKey: 'ssh.card5Title', descKey: 'ssh.card5Desc',
     titleDefault: '백업 & 복구',
     descDefault: '호스트, 자격증명, 라우팅 설정을 JSON으로 내보내고 다시 가져올 수 있습니다.' },
-  { icon: '🔍', titleKey: 'ssh.card6Title', descKey: 'ssh.card6Desc',
+  { icon: 'search', titleKey: 'ssh.card6Title', descKey: 'ssh.card6Desc',
     titleDefault: '통합 검색',
     descDefault: '별칭, 호스트명, 태그, 메모를 한 번에 검색할 수 있습니다.' },
 ];
 ---
 
 <section
-  class="px-16 py-24 border-t border-white/[0.04] bg-bg-dark"
+  class="border-t border-white/[0.04] bg-bg-dark px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-16"
 >
   <!-- Header -->
-  <div class="text-center mb-14">
+  <div class="mb-12 text-center sm:mb-14">
     <span
       class="inline-block bg-blue-muted/15 border border-blue-muted/30 text-blue-accent
              text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
       data-i18n="ssh.label"
     >SSH Management</span>
-    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
       <span class="grad-text" data-i18n="ssh.title1">서버와 자격증명을</span>
       <br />
       <span class="grad-text" data-i18n="ssh.title2">한 곳에서 관리</span>
     </h2>
-    <p class="text-text-muted text-base mt-3" data-i18n="ssh.sub">
+    <p class="mt-3 text-sm text-text-muted sm:text-base" data-i18n="ssh.sub">
       호스트부터 SSH 키, 점프 호스트, 포트 포워딩까지 한곳에서 관리합니다
     </p>
   </div>
 
   <!-- Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+  <div class="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
     {cards.map(c => (
       <div
-        class="bg-white/[0.02] border border-white/[0.06] rounded-2xl p-7
+        class="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 sm:p-6 md:p-7
                hover:border-blue-muted/20 transition-colors duration-200"
       >
-        <div class="text-2xl mb-3.5">{c.icon}</div>
+        <div class="mb-3.5">
+          <SectionIconBadge name={c.icon} />
+        </div>
         <h3 class="text-base font-bold text-text-primary mb-2" data-i18n={c.titleKey}>
           {c.titleDefault}
         </h3>

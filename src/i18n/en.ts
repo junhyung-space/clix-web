@@ -7,9 +7,9 @@ export const en: Translations = {
   },
 
   hero: {
-    headline1: 'SSH terminal,',
-    headline2: 'built for AI coding tools.',
-    sub: 'A macOS SSH workspace app for developers using Claude Code, Codex, and Gemini CLI.',
+    headline1: 'From SSH setup',
+    headline2: 'to AI work in one place.',
+    sub: 'A macOS app for SSH host management, port forwarding, and AI CLI workflows.',
     cta: 'Public release coming soon',
     meta: 'macOS 14.0 Sonoma or later · Apple Silicon & Intel',
   },

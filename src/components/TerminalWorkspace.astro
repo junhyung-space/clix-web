@@ -1,21 +1,23 @@
 ---
+import SectionIconBadge from './SectionIconBadge.astro';
+
 const features = [
-  { icon: '🗂', titleKey: 'workspace.feat1Title', descKey: 'workspace.feat1Desc',
+  { icon: 'layers', titleKey: 'workspace.feat1Title', descKey: 'workspace.feat1Desc',
     titleDefault: '세션 전환',
     descDefault: '열린 터미널 세션을 사이드바에서 빠르게 오가며 작업할 수 있습니다.' },
-  { icon: '💾', titleKey: 'workspace.feat2Title', descKey: 'workspace.feat2Desc',
+  { icon: 'history', titleKey: 'workspace.feat2Title', descKey: 'workspace.feat2Desc',
     titleDefault: '워크스페이스 복구',
     descDefault: '앱을 다시 실행해도 열려 있던 세션과 작업 디렉토리를 이어서 복구할 수 있습니다.' },
-  { icon: '⚡', titleKey: 'workspace.feat3Title', descKey: 'workspace.feat3Desc',
+  { icon: 'terminal', titleKey: 'workspace.feat3Title', descKey: 'workspace.feat3Desc',
     titleDefault: 'Ghostty 엔진',
     descDefault: 'Ghostty/libghostty 기반의 네이티브 렌더링. 빠르고 정확한 터미널 에뮬레이션.' },
 ];
 ---
 
 <section
-  class="px-16 py-24 border-t border-white/[0.04] bg-bg-secondary"
+  class="border-t border-white/[0.04] bg-bg-secondary px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-16"
 >
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center max-w-5xl mx-auto">
+  <div class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
 
     <!-- Left: Text -->
     <div>
@@ -24,22 +26,21 @@ const features = [
                text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
         data-i18n="workspace.label"
       >Terminal Workspace</span>
-      <h2 class="text-4xl font-extrabold tracking-tight leading-tight mb-3">
+      <h2 class="mb-3 text-3xl font-extrabold tracking-tight leading-tight sm:text-4xl">
         <span class="grad-text" data-i18n="workspace.title1">터미널 워크스페이스와</span>
         <br />
         <span class="grad-text" data-i18n="workspace.title2">작업 복구</span>
       </h2>
-      <p class="text-text-muted text-sm leading-relaxed" data-i18n="workspace.sub">
+      <p class="text-sm leading-relaxed text-text-muted" data-i18n="workspace.sub">
         여러 세션을 전환하며 작업하고, 다시 열어도 이전 작업 상태를 이어갈 수 있습니다
       </p>
 
       <div class="mt-8 flex flex-col gap-5">
         {features.map(f => (
           <div class="flex items-start gap-4">
-            <div
-              class="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0"
-              style="background: rgba(29,78,216,0.2); border: 1px solid rgba(59,130,246,0.2);"
-            >{f.icon}</div>
+            <div class="flex-shrink-0">
+              <SectionIconBadge name={f.icon} size="sm" />
+            </div>
             <div>
               <h4 class="text-sm font-semibold text-text-primary mb-1" data-i18n={f.titleKey}>
                 {f.titleDefault}
@@ -55,7 +56,7 @@ const features = [
 
     <!-- Right: Terminal screenshot -->
     <div
-      class="rounded-2xl overflow-hidden"
+      class="overflow-hidden rounded-2xl"
       style="background: #0d1117; border: 1px solid rgba(59,130,246,0.2); box-shadow: 0 0 60px rgba(14,165,233,0.08), 0 30px 60px rgba(0,0,0,0.4);"
     >
       <img
