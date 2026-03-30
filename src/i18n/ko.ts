@@ -1,7 +1,7 @@
 export const ko = {
   // Nav
   nav: {
-    download: '출시 예정',
+    download: '다운로드',
     guide: '가이드',
   },
 
@@ -10,7 +10,7 @@ export const ko = {
     headline1: 'SSH 연결부터',
     headline2: 'AI 작업까지 한곳에서',
     sub: 'SSH 호스트 관리, 포트 포워딩, AI CLI 작업 흐름을 지원하는 macOS 앱',
-    cta: '공개 배포 준비 중',
+    cta: '무료 다운로드',
     meta: 'macOS 14.0 Sonoma 이상 · Apple Silicon & Intel',
   },
 
@@ -84,9 +84,9 @@ export const ko = {
   download: {
     title1: '무료로 설치하고',
     title2: '바로 시작해보세요',
-    cta: '공개 배포 준비 중',
-    req: 'macOS 14.0 Sonoma 이상 · Apple Silicon & Intel',
-    releases: '배포 링크는 공개 시 이 페이지에서 제공됩니다.',
+    cta: '무료 다운로드',
+    req: 'macOS 14.0 Sonoma 이상 · Apple Silicon (arm64)',
+    releases: 'v0.1.0 · 비공식 배포 (서명 없음)',
   },
 
   // Footer
