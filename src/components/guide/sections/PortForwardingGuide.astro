@@ -1,0 +1,70 @@
+---
+import { en } from '../../../i18n/en';
+
+const guide = en.guide.portForwarding;
+---
+<div id="port-forwarding" class="guide-section guide-shell">
+  <p class="guide-kicker text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase" data-i18n="guide.portForwarding.label">{guide.label}</p>
+  <h2 class="guide-title" data-i18n="guide.portForwarding.title">{guide.title}</h2>
+  <p class="guide-copy" data-i18n="guide.portForwarding.sub">
+    {guide.sub}
+  </p>
+
+  <div class="guide-summary">
+    <p class="guide-summary-title" data-i18n="guide.common.whatYoullDo">{en.guide.common.whatYoullDo}</p>
+    <ul class="guide-summary-list">
+      <li data-i18n="guide.portForwarding.createTitle">{guide.createTitle}</li>
+      <li data-i18n="guide.portForwarding.autoStartTitle">{guide.autoStartTitle}</li>
+      <li data-i18n="guide.portForwarding.statusTitle">{guide.statusTitle}</li>
+    </ul>
+  </div>
+
+  <section class="guide-section-block">
+    <h3 class="guide-subtitle" data-i18n="guide.portForwarding.whenTitle">{guide.whenTitle}</h3>
+    <p class="guide-prose" data-i18n="guide.portForwarding.whenDesc">
+      {guide.whenDesc}
+    </p>
+  </section>
+
+  <section class="guide-section-block">
+    <h3 class="guide-subtitle" data-i18n="guide.portForwarding.typesTitle">{guide.typesTitle}</h3>
+    <ul class="guide-list">
+      <li data-i18n="guide.portForwarding.typeLocal">{guide.typeLocal}</li>
+      <li data-i18n="guide.portForwarding.typeRemote">{guide.typeRemote}</li>
+      <li data-i18n="guide.portForwarding.typeDynamic">{guide.typeDynamic}</li>
+    </ul>
+  </section>
+
+  {[
+    {
+      titleKey: 'guide.portForwarding.createTitle',
+      descKey: 'guide.portForwarding.createDesc',
+      titleDefault: guide.createTitle,
+      descDefault: guide.createDesc,
+    },
+    {
+      titleKey: 'guide.portForwarding.autoStartTitle',
+      descKey: 'guide.portForwarding.autoStartDesc',
+      titleDefault: guide.autoStartTitle,
+      descDefault: guide.autoStartDesc,
+    },
+    {
+      titleKey: 'guide.portForwarding.statusTitle',
+      descKey: 'guide.portForwarding.statusDesc',
+      titleDefault: guide.statusTitle,
+      descDefault: guide.statusDesc,
+    },
+  ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+    <section class="guide-section-block">
+      <h3 class="guide-subtitle" data-i18n={titleKey}>{titleDefault}</h3>
+      <p class="guide-prose" data-i18n={descKey}>{descDefault}</p>
+    </section>
+  ))}
+
+  <div class="guide-next">
+    <p class="guide-next-label" data-i18n="guide.common.nextStep">{en.guide.common.nextStep}</p>
+    <p class="guide-next-copy" data-i18n="guide.portForwarding.nextStep">
+      {guide.nextStep}
+    </p>
+  </div>
+</div>

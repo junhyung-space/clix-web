@@ -1,0 +1,39 @@
+---
+import { en } from '../i18n/en';
+
+const CONTACT_EMAIL = 'junhyung.lee@genesisnest.com';
+---
+
+<footer
+  class="border-t border-white/[0.04] bg-bg-darkest px-4 py-8 sm:px-6 md:px-10 md:py-10 lg:px-16"
+>
+  <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 no-underline">
+      <div class="w-5 h-5">
+        <img src="/icon.png" alt="CLIX" class="w-full h-full object-contain" />
+      </div>
+      <span class="text-xs font-bold tracking-[2px] text-white/78">CLIX</span>
+    </a>
+
+    <!-- Links -->
+    <div class="flex items-center gap-6 flex-wrap justify-center">
+      <a
+        href="#"
+        class="text-xs text-white/68 hover:text-white/88 transition-colors"
+        data-i18n="footer.links.privacy"
+      >{en.footer.links.privacy}</a>
+      <a
+        href={`mailto:${CONTACT_EMAIL}`}
+        class="text-xs text-white/68 hover:text-white/88 transition-colors"
+      >{CONTACT_EMAIL}</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="text-xs text-white/56" data-i18n="footer.copyright">
+      {en.footer.copyright}
+    </p>
+
+  </div>
+</footer>

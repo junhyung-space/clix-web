@@ -1,0 +1,72 @@
+---
+import { en } from '../../../i18n/en';
+
+const guide = en.guide.workspace;
+---
+<div id="workspace" class="guide-section guide-shell">
+  <p class="guide-kicker text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase" data-i18n="guide.workspace.label">{guide.label}</p>
+  <h2 class="guide-title" data-i18n="guide.workspace.title">{guide.title}</h2>
+  <p class="guide-copy" data-i18n="guide.workspace.sub">
+    {guide.sub}
+  </p>
+
+  <div class="guide-summary">
+    <p class="guide-summary-title" data-i18n="guide.common.whatYoullDo">{en.guide.common.whatYoullDo}</p>
+    <ul class="guide-summary-list">
+      <li data-i18n="guide.workspace.newSessionTitle">{guide.newSessionTitle}</li>
+      <li data-i18n="guide.workspace.organizeTitle">{guide.organizeTitle}</li>
+      <li data-i18n="guide.workspace.recoveryTitle">{guide.recoveryTitle}</li>
+    </ul>
+  </div>
+
+  {[
+    {
+      titleKey: 'guide.workspace.layoutTitle',
+      descKey: 'guide.workspace.layoutDesc',
+      titleDefault: guide.layoutTitle,
+      descDefault: guide.layoutDesc,
+    },
+    {
+      titleKey: 'guide.workspace.newSessionTitle',
+      descKey: 'guide.workspace.newSessionDesc',
+      titleDefault: guide.newSessionTitle,
+      descDefault: guide.newSessionDesc,
+    },
+    {
+      titleKey: 'guide.workspace.organizeTitle',
+      descKey: 'guide.workspace.organizeDesc',
+      titleDefault: guide.organizeTitle,
+      descDefault: guide.organizeDesc,
+    },
+    {
+      titleKey: 'guide.workspace.dragTitle',
+      descKey: 'guide.workspace.dragDesc',
+      titleDefault: guide.dragTitle,
+      descDefault: guide.dragDesc,
+    },
+    {
+      titleKey: 'guide.workspace.snippetTitle',
+      descKey: 'guide.workspace.snippetDesc',
+      titleDefault: guide.snippetTitle,
+      descDefault: guide.snippetDesc,
+    },
+    {
+      titleKey: 'guide.workspace.recoveryTitle',
+      descKey: 'guide.workspace.recoveryDesc',
+      titleDefault: guide.recoveryTitle,
+      descDefault: guide.recoveryDesc,
+    },
+  ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+    <section class="guide-section-block">
+      <h3 class="guide-subtitle" data-i18n={titleKey}>{titleDefault}</h3>
+      <p class="guide-prose" data-i18n={descKey}>{descDefault}</p>
+    </section>
+  ))}
+
+  <div class="guide-next">
+    <p class="guide-next-label" data-i18n="guide.common.nextStep">{en.guide.common.nextStep}</p>
+    <p class="guide-next-copy" data-i18n="guide.workspace.nextStep">
+      {guide.nextStep}
+    </p>
+  </div>
+</div>

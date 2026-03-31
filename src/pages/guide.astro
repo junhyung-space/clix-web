@@ -1,0 +1,100 @@
+---
+import GuideLayout from '../layouts/GuideLayout.astro';
+import GettingStarted from '../components/guide/sections/GettingStarted.astro';
+import SSHGuide from '../components/guide/sections/SSHGuide.astro';
+import PortForwardingGuide from '../components/guide/sections/PortForwardingGuide.astro';
+import WorkspaceGuide from '../components/guide/sections/WorkspaceGuide.astro';
+import AIIntegrationGuide from '../components/guide/sections/AIIntegrationGuide.astro';
+import BackupGuide from '../components/guide/sections/BackupGuide.astro';
+import SettingsGuide from '../components/guide/sections/SettingsGuide.astro';
+---
+
+<GuideLayout>
+  <GettingStarted />
+  <SSHGuide />
+  <PortForwardingGuide />
+  <WorkspaceGuide />
+  <AIIntegrationGuide />
+  <BackupGuide />
+  <SettingsGuide />
+</GuideLayout>
+
+<script>
+  const SECTIONS = [
+    'getting-started',
+    'ssh',
+    'port-forwarding',
+    'workspace',
+    'ai-integration',
+    'backup',
+    'settings',
+  ] as const;
+
+  type SectionId = (typeof SECTIONS)[number];
+
+  function scrollToSectionStart(target: HTMLElement) {
+    const nav = document.querySelector('nav');
+    const navHeight = nav instanceof HTMLElement ? nav.getBoundingClientRect().height : 0;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
+    window.scrollTo({
+      top: Math.max(targetTop, 0),
+      behavior: 'smooth',
+    });
+  }
+
+  function showSection(id: SectionId, options?: { scrollToTop?: boolean }) {
+    // Hide all sections
+    SECTIONS.forEach((s) => {
+      const el = document.getElementById(s);
+      if (el) el.style.display = 'none';
+    });
+
+    // Show target section
+    const target = document.getElementById(id);
+    if (target) target.style.display = 'block';
+
+    // Update sidebar active state
+    document.querySelectorAll<HTMLElement>('.guide-sidebar-item').forEach((btn) => {
+      const isActive = btn.dataset.section === id;
+      if (isActive) {
+        btn.classList.add('!text-white', 'font-semibold', '!border-white/[0.08]', 'bg-white/[0.05]');
+        btn.classList.remove('text-text-muted');
+      } else {
+        btn.classList.remove('!text-white', 'font-semibold', '!border-white/[0.08]', 'bg-white/[0.05]');
+        btn.classList.remove('text-text-muted');
+      }
+    });
+
+    // Update URL hash without scroll jump
+    history.replaceState(null, '', `#${id}`);
+
+    if (target instanceof HTMLElement && options?.scrollToTop) {
+      requestAnimationFrame(() => scrollToSectionStart(target));
+    }
+  }
+
+  function init() {
+    const hash = window.location.hash.slice(1) as SectionId;
+    const validHash = (SECTIONS as readonly string[]).includes(hash)
+      ? (hash as SectionId)
+      : 'getting-started';
+    showSection(validHash);
+  }
+
+  document.querySelectorAll<HTMLElement>('.guide-sidebar-item').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const section = btn.dataset.section as SectionId;
+      if (section && (SECTIONS as readonly string[]).includes(section)) {
+        showSection(section, { scrollToTop: true });
+      }
+    });
+  });
+
+  init();
+</script>
+
+<style>
+  :global(.guide-section) {
+    display: none;
+  }
+</style>

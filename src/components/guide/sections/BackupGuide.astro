@@ -1,0 +1,73 @@
+---
+import { en } from '../../../i18n/en';
+
+const guide = en.guide.backup;
+---
+<div id="backup" class="guide-section guide-shell">
+  <p class="guide-kicker text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase" data-i18n="guide.backup.label">{guide.label}</p>
+  <h2 class="guide-title" data-i18n="guide.backup.title">{guide.title}</h2>
+  <p class="guide-copy" data-i18n="guide.backup.sub">
+    {guide.sub}
+  </p>
+
+  <div class="guide-summary">
+    <p class="guide-summary-title" data-i18n="guide.common.whatYoullDo">{en.guide.common.whatYoullDo}</p>
+    <ul class="guide-summary-list">
+      <li data-i18n="guide.backup.notificationsTitle">{guide.notificationsTitle}</li>
+      <li data-i18n="guide.backup.diagnosticsTitle">{guide.diagnosticsTitle}</li>
+      <li data-i18n="guide.backup.exportTitle">{guide.exportTitle}</li>
+    </ul>
+  </div>
+
+  {[
+    {
+      titleKey: 'guide.backup.notificationsTitle',
+      descKey: 'guide.backup.notificationsDesc',
+      titleDefault: guide.notificationsTitle,
+      descDefault: guide.notificationsDesc,
+    },
+    {
+      titleKey: 'guide.backup.reconnectTitle',
+      descKey: 'guide.backup.reconnectDesc',
+      titleDefault: guide.reconnectTitle,
+      descDefault: guide.reconnectDesc,
+    },
+    {
+      titleKey: 'guide.backup.diagnosticsTitle',
+      descKey: 'guide.backup.diagnosticsDesc',
+      titleDefault: guide.diagnosticsTitle,
+      descDefault: guide.diagnosticsDesc,
+    },
+    {
+      titleKey: 'guide.backup.exportTitle',
+      descKey: 'guide.backup.exportDesc',
+      titleDefault: guide.exportTitle,
+      descDefault: guide.exportDesc,
+    },
+    {
+      titleKey: 'guide.backup.importTitle',
+      descKey: 'guide.backup.importDesc',
+      titleDefault: guide.importTitle,
+      descDefault: guide.importDesc,
+    },
+  ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+    <section class="guide-section-block">
+      <h3 class="guide-subtitle" data-i18n={titleKey}>{titleDefault}</h3>
+      <p class="guide-prose" data-i18n={descKey}>{descDefault}</p>
+    </section>
+  ))}
+
+  <div class="guide-callout">
+    <h3 class="guide-subtitle !mb-2" data-i18n="guide.backup.warningTitle">{guide.warningTitle}</h3>
+    <p class="guide-prose" data-i18n="guide.backup.warningDesc">
+      {guide.warningDesc}
+    </p>
+  </div>
+
+  <div class="guide-next">
+    <p class="guide-next-label" data-i18n="guide.common.nextStep">{en.guide.common.nextStep}</p>
+    <p class="guide-next-copy" data-i18n="guide.backup.nextStep">
+      {guide.nextStep}
+    </p>
+  </div>
+</div>

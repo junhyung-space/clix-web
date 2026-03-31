@@ -1,0 +1,83 @@
+---
+import { en } from '../../../i18n/en';
+
+const guide = en.guide.ssh;
+---
+<div id="ssh" class="guide-section guide-shell">
+  <p class="guide-kicker text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase" data-i18n="guide.ssh.label">{guide.label}</p>
+  <h2 class="guide-title" data-i18n="guide.ssh.title">{guide.title}</h2>
+  <p class="guide-copy" data-i18n="guide.ssh.sub">
+    {guide.sub}
+  </p>
+
+  <div class="guide-summary">
+    <p class="guide-summary-title" data-i18n="guide.common.whatYoullDo">{en.guide.common.whatYoullDo}</p>
+    <ul class="guide-summary-list">
+      <li data-i18n="guide.ssh.credentialTitle">{guide.credentialTitle}</li>
+      <li data-i18n="guide.ssh.routeTitle">{guide.routeTitle}</li>
+      <li data-i18n="guide.ssh.preflightTitle">{guide.preflightTitle}</li>
+    </ul>
+  </div>
+
+  <section class="guide-section-block">
+    <h3 class="guide-subtitle" data-i18n="guide.ssh.flowTitle">{guide.flowTitle}</h3>
+    <ol class="guide-list">
+      <li data-i18n="guide.ssh.flowItem1">{guide.flowItem1}</li>
+      <li data-i18n="guide.ssh.flowItem2">{guide.flowItem2}</li>
+      <li data-i18n="guide.ssh.flowItem3">{guide.flowItem3}</li>
+      <li data-i18n="guide.ssh.flowItem4">{guide.flowItem4}</li>
+      <li data-i18n="guide.ssh.flowItem5">{guide.flowItem5}</li>
+    </ol>
+  </section>
+
+  {[
+    {
+      titleKey: 'guide.ssh.hostTitle',
+      descKey: 'guide.ssh.hostDesc',
+      titleDefault: guide.hostTitle,
+      descDefault: guide.hostDesc,
+    },
+    {
+      titleKey: 'guide.ssh.credentialTitle',
+      descKey: 'guide.ssh.credentialDesc',
+      titleDefault: guide.credentialTitle,
+      descDefault: guide.credentialDesc,
+    },
+    {
+      titleKey: 'guide.ssh.routeTitle',
+      descKey: 'guide.ssh.routeDesc',
+      titleDefault: guide.routeTitle,
+      descDefault: guide.routeDesc,
+    },
+    {
+      titleKey: 'guide.ssh.knownHostsTitle',
+      descKey: 'guide.ssh.knownHostsDesc',
+      titleDefault: guide.knownHostsTitle,
+      descDefault: guide.knownHostsDesc,
+    },
+    {
+      titleKey: 'guide.ssh.preflightTitle',
+      descKey: 'guide.ssh.preflightDesc',
+      titleDefault: guide.preflightTitle,
+      descDefault: guide.preflightDesc,
+    },
+    {
+      titleKey: 'guide.ssh.searchTitle',
+      descKey: 'guide.ssh.searchDesc',
+      titleDefault: guide.searchTitle,
+      descDefault: guide.searchDesc,
+    },
+  ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+    <section class="guide-section-block">
+      <h3 class="guide-subtitle" data-i18n={titleKey}>{titleDefault}</h3>
+      <p class="guide-prose" data-i18n={descKey}>{descDefault}</p>
+    </section>
+  ))}
+
+  <div class="guide-next">
+    <p class="guide-next-label" data-i18n="guide.common.nextStep">{en.guide.common.nextStep}</p>
+    <p class="guide-next-copy" data-i18n="guide.ssh.nextStep">
+      {guide.nextStep}
+    </p>
+  </div>
+</div>

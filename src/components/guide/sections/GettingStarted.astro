@@ -1,0 +1,118 @@
+---
+import { en } from '../../../i18n/en';
+
+const guide = en.guide.gettingStarted;
+---
+<div id="getting-started" class="guide-section guide-shell">
+  <p class="guide-kicker text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase" data-i18n="guide.gettingStarted.label">{guide.label}</p>
+  <h2 class="guide-title" data-i18n="guide.gettingStarted.title">{guide.title}</h2>
+  <p class="guide-copy" data-i18n="guide.gettingStarted.sub">
+    {guide.sub}
+  </p>
+
+  <div class="guide-summary">
+    <p class="guide-summary-title" data-i18n="guide.common.whatYoullDo">{en.guide.common.whatYoullDo}</p>
+    <ul class="guide-summary-list">
+      <li data-i18n="guide.gettingStarted.step1Title">{guide.step1Title}</li>
+      <li data-i18n="guide.gettingStarted.step4Title">{guide.step4Title}</li>
+      <li data-i18n="guide.gettingStarted.step5Title">{guide.step5Title}</li>
+    </ul>
+  </div>
+
+  <section class="guide-section-block">
+    <h3 class="guide-subtitle" data-i18n="guide.gettingStarted.beforeTitle">{guide.beforeTitle}</h3>
+    <ul class="guide-list">
+      <li data-i18n="guide.gettingStarted.beforeItem1">{guide.beforeItem1}</li>
+      <li data-i18n="guide.gettingStarted.beforeItem2">{guide.beforeItem2}</li>
+      <li data-i18n="guide.gettingStarted.beforeItem3">{guide.beforeItem3}</li>
+      <li data-i18n="guide.gettingStarted.beforeItem4">{guide.beforeItem4}</li>
+    </ul>
+  </section>
+
+  <section class="guide-section-block">
+    <h3 class="guide-subtitle" data-i18n="guide.gettingStarted.layoutTitle">{guide.layoutTitle}</h3>
+    <ul class="guide-list">
+      <li data-i18n="guide.gettingStarted.layoutItem1">{guide.layoutItem1}</li>
+      <li data-i18n="guide.gettingStarted.layoutItem2">{guide.layoutItem2}</li>
+      <li data-i18n="guide.gettingStarted.layoutItem3">{guide.layoutItem3}</li>
+      <li data-i18n="guide.gettingStarted.layoutItem4">{guide.layoutItem4}</li>
+    </ul>
+  </section>
+
+  <section class="guide-section-block">
+    <h3 class="guide-subtitle" data-i18n="guide.gettingStarted.tipTitle">{guide.tipTitle}</h3>
+    <div class="guide-steps">
+      {[
+        {
+          num: 1,
+          titleKey: 'guide.gettingStarted.step1Title',
+          descKey: 'guide.gettingStarted.step1Desc',
+          titleDefault: guide.step1Title,
+          descDefault: guide.step1Desc,
+        },
+        {
+          num: 2,
+          titleKey: 'guide.gettingStarted.step2Title',
+          descKey: 'guide.gettingStarted.step2Desc',
+          titleDefault: guide.step2Title,
+          descDefault: guide.step2Desc,
+        },
+        {
+          num: 3,
+          titleKey: 'guide.gettingStarted.step3Title',
+          descKey: 'guide.gettingStarted.step3Desc',
+          titleDefault: guide.step3Title,
+          descDefault: guide.step3Desc,
+        },
+        {
+          num: 4,
+          titleKey: 'guide.gettingStarted.step4Title',
+          descKey: 'guide.gettingStarted.step4Desc',
+          titleDefault: guide.step4Title,
+          descDefault: guide.step4Desc,
+        },
+        {
+          num: 5,
+          titleKey: 'guide.gettingStarted.step5Title',
+          descKey: 'guide.gettingStarted.step5Desc',
+          titleDefault: guide.step5Title,
+          descDefault: guide.step5Desc,
+        },
+      ].map(({ num, titleKey, descKey, titleDefault, descDefault }) => (
+        <div class="guide-step">
+          <div class="guide-step-index">{num}</div>
+          <div class="guide-step-body">
+            <h4 class="mb-1 text-sm font-semibold text-text-primary" data-i18n={titleKey}>{titleDefault}</h4>
+            <p data-i18n={descKey}>{descDefault}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="guide-callout" data-tone="accent">
+    <h3 class="guide-subtitle !mb-2" data-i18n="guide.gettingStarted.securityTitle">{guide.securityTitle}</h3>
+    <p class="guide-prose" data-i18n="guide.gettingStarted.securityDesc">
+      {guide.securityDesc}
+    </p>
+  </div>
+
+  <div class="guide-code">
+    <div class="guide-code-line-muted" data-i18n="guide.gettingStarted.commandComment">{guide.commandComment}</div>
+    <div class="guide-code-line" data-i18n="guide.gettingStarted.commandLine">{guide.commandLine}</div>
+    <div class="guide-code-note" data-i18n="guide.gettingStarted.commandResult">{guide.commandResult}</div>
+  </div>
+
+  <div class="guide-callout">
+    <p class="guide-prose" data-i18n="guide.gettingStarted.tipDesc">
+      {guide.tipDesc}
+    </p>
+  </div>
+
+  <div class="guide-next">
+    <p class="guide-next-label" data-i18n="guide.common.nextStep">{en.guide.common.nextStep}</p>
+    <p class="guide-next-copy" data-i18n="guide.gettingStarted.nextStep">
+      {guide.nextStep}
+    </p>
+  </div>
+</div>

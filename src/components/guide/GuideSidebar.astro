@@ -1,0 +1,32 @@
+---
+import { en } from '../../i18n/en';
+---
+<aside
+  class="hidden rounded-2xl border border-white/[0.07] bg-white/[0.02] px-2 py-3
+         shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] lg:block lg:w-[208px] lg:flex-shrink-0
+         lg:sticky lg:top-[95px]"
+>
+  <p
+    class="mb-2 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white/42"
+    data-i18n="guide.sidebar.label"
+  >{en.guide.sidebar.label}</p>
+
+  {[
+    { section: 'getting-started', key: 'guide.sidebar.gettingStarted', defaultText: en.guide.sidebar.gettingStarted },
+    { section: 'ssh',             key: 'guide.sidebar.ssh',            defaultText: en.guide.sidebar.ssh },
+    { section: 'port-forwarding', key: 'guide.sidebar.portForwarding', defaultText: en.guide.sidebar.portForwarding },
+    { section: 'workspace',       key: 'guide.sidebar.workspace',      defaultText: en.guide.sidebar.workspace },
+    { section: 'ai-integration',  key: 'guide.sidebar.ai',             defaultText: en.guide.sidebar.ai },
+    { section: 'backup',          key: 'guide.sidebar.backup',         defaultText: en.guide.sidebar.backup },
+    { section: 'settings',        key: 'guide.sidebar.settings',       defaultText: en.guide.sidebar.settings },
+  ].map(({ section, key, defaultText }) => (
+    <button
+      data-section={section}
+      class="guide-sidebar-item w-full rounded-xl border border-transparent px-3 py-2.5
+             text-left text-[13px] font-semibold text-white/86 transition-colors duration-150
+             hover:border-white/[0.06] hover:bg-white/[0.035] hover:text-white"
+    >
+    <span data-i18n={key}>{defaultText}</span>
+    </button>
+  ))}
+</aside>

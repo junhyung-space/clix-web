@@ -1,0 +1,39 @@
+---
+import Layout from './Layout.astro';
+import Nav from '../components/Nav.astro';
+import GuideSidebar from '../components/guide/GuideSidebar.astro';
+
+interface Props {
+  titleEn?: string;
+  titleKo?: string;
+  descriptionEn?: string;
+  descriptionKo?: string;
+}
+
+const {
+  titleEn = 'CLIX Guide',
+  titleKo = 'CLIX 가이드',
+  descriptionEn = 'Get started with CLIX from installation to SSH connections, terminal workflows, AI CLI usage, recovery, and backup.',
+  descriptionKo = '설치부터 SSH 연결, 터미널 워크플로, AI CLI 사용, 복구와 백업까지 CLIX 사용 흐름을 안내합니다.',
+} = Astro.props;
+---
+
+<Layout
+  titleEn={titleEn}
+  titleKo={titleKo}
+  descriptionEn={descriptionEn}
+  descriptionKo={descriptionKo}
+  pageType="guide"
+>
+  <Nav />
+  <div class="min-h-[calc(100vh-73px)] px-4 py-6 sm:px-6 sm:py-8 md:px-8 lg:px-10 lg:py-10">
+    <div class="mx-auto flex w-full max-w-[88rem] flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
+      <GuideSidebar />
+      <main class="w-full min-w-0 flex-1">
+        <div class="max-w-[56rem] lg:pt-2">
+          <slot />
+        </div>
+      </main>
+    </div>
+  </div>
+</Layout>

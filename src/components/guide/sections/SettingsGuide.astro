@@ -1,0 +1,77 @@
+---
+import { en } from '../../../i18n/en';
+
+const guide = en.guide.settings;
+---
+<div id="settings" class="guide-section guide-shell">
+  <p class="guide-kicker text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase" data-i18n="guide.settings.label">{guide.label}</p>
+  <h2 class="guide-title" data-i18n="guide.settings.title">{guide.title}</h2>
+  <p class="guide-copy" data-i18n="guide.settings.sub">
+    {guide.sub}
+  </p>
+
+  <div class="guide-summary">
+    <p class="guide-summary-title" data-i18n="guide.common.whatYoullDo">{en.guide.common.whatYoullDo}</p>
+    <ul class="guide-summary-list">
+      <li data-i18n="guide.settings.appearanceTitle">{guide.appearanceTitle}</li>
+      <li data-i18n="guide.settings.terminalTitle">{guide.terminalTitle}</li>
+      <li data-i18n="guide.settings.shortcutsTitle">{guide.shortcutsTitle}</li>
+    </ul>
+  </div>
+
+  {[
+    {
+      titleKey: 'guide.settings.appearanceTitle',
+      descKey: 'guide.settings.appearanceDesc',
+      titleDefault: guide.appearanceTitle,
+      descDefault: guide.appearanceDesc,
+    },
+    {
+      titleKey: 'guide.settings.terminalTitle',
+      descKey: 'guide.settings.terminalDesc',
+      titleDefault: guide.terminalTitle,
+      descDefault: guide.terminalDesc,
+    },
+    {
+      titleKey: 'guide.settings.launchTitle',
+      descKey: 'guide.settings.launchDesc',
+      titleDefault: guide.launchTitle,
+      descDefault: guide.launchDesc,
+    },
+    {
+      titleKey: 'guide.settings.shellTitle',
+      descKey: 'guide.settings.shellDesc',
+      titleDefault: guide.shellTitle,
+      descDefault: guide.shellDesc,
+    },
+  ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+    <section class="guide-section-block">
+      <h3 class="guide-subtitle" data-i18n={titleKey}>{titleDefault}</h3>
+      <p class="guide-prose" data-i18n={descKey}>{descDefault}</p>
+    </section>
+  ))}
+
+  <section class="guide-section-block">
+    <h3 class="guide-subtitle" data-i18n="guide.settings.shortcutsTitle">{guide.shortcutsTitle}</h3>
+    <ul class="guide-list">
+      <li data-i18n="guide.settings.shortcutItem1">{guide.shortcutItem1}</li>
+      <li data-i18n="guide.settings.shortcutItem2">{guide.shortcutItem2}</li>
+      <li data-i18n="guide.settings.shortcutItem3">{guide.shortcutItem3}</li>
+      <li data-i18n="guide.settings.shortcutItem4">{guide.shortcutItem4}</li>
+    </ul>
+  </section>
+
+  <div class="guide-callout" data-tone="accent">
+    <h3 class="guide-subtitle !mb-2" data-i18n="guide.settings.recommendTitle">{guide.recommendTitle}</h3>
+    <p class="guide-prose" data-i18n="guide.settings.recommendDesc">
+      {guide.recommendDesc}
+    </p>
+  </div>
+
+  <div class="guide-next">
+    <p class="guide-next-label" data-i18n="guide.common.nextStep">{en.guide.common.nextStep}</p>
+    <p class="guide-next-copy" data-i18n="guide.settings.nextStep">
+      {guide.nextStep}
+    </p>
+  </div>
+</div>

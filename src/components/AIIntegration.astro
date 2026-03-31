@@ -1,0 +1,88 @@
+---
+import SectionIconBadge from './SectionIconBadge.astro';
+import { en } from '../i18n/en';
+---
+
+<section
+  class="relative overflow-hidden border-t border-white/[0.05] px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-16"
+  style="background: linear-gradient(180deg, #080c14 0%, #0d1322 100%);"
+>
+  <!-- Background glow -->
+  <div
+    class="pointer-events-none absolute -top-48 left-1/2 h-[400px] w-[600px] -translate-x-1/2"
+    style="background: radial-gradient(ellipse, rgba(30,64,175,0.15), transparent 70%);"
+  ></div>
+
+  <!-- Section Header -->
+  <div class="relative mb-12 text-center sm:mb-16">
+    <span
+      class="inline-block bg-blue-muted/15 border border-blue-muted/30 text-blue-accent
+             text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
+      data-i18n="ai.label"
+    >{en.ai.label}</span>
+    <h2 class="text-3xl font-extrabold tracking-tight leading-tight sm:text-4xl md:text-5xl">
+      <span class="grad-text" data-i18n="ai.title1">{en.ai.title1}</span>
+      <br />
+      <span class="grad-text" data-i18n="ai.title2">{en.ai.title2}</span>
+    </h2>
+    <p class="mx-auto mt-3 max-w-lg text-sm text-white/72 sm:text-base" data-i18n="ai.sub">
+      {en.ai.sub}
+    </p>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:gap-6 md:grid-cols-3">
+
+    <!-- Card 1: in-app notifications -->
+    <div
+      class="card-top-line relative rounded-2xl border border-blue-muted/15 bg-white/[0.02] p-5 sm:p-6 md:p-8"
+    >
+      <div class="mb-4">
+        <SectionIconBadge name="bell" />
+      </div>
+      <h3 class="text-xl font-bold text-text-primary mb-2.5 whitespace-pre-line" data-i18n="ai.card1.title">{en.ai.card1.title}</h3>
+      <p class="mb-4 text-sm leading-relaxed text-white/72" data-i18n="ai.card1.desc">
+        {en.ai.card1.desc}
+      </p>
+      <div class="rounded-xl border border-white/[0.06] bg-[#030712] p-4 font-mono text-xs">
+        <div class="text-text-primary">$ clix-notify "Deploy complete" "The build is finished" completed</div>
+        <div class="text-blue-muted mt-1" data-i18n="ai.card1.demoOutput">{en.ai.card1.demoOutput}</div>
+      </div>
+    </div>
+
+    <!-- Card 2: macOS notifications -->
+    <div
+      class="card-top-line relative rounded-2xl border border-blue-muted/15 bg-white/[0.02] p-5 sm:p-6 md:p-8"
+    >
+      <div class="mb-4">
+        <SectionIconBadge name="network" />
+      </div>
+      <h3 class="text-xl font-bold text-text-primary mb-2.5 whitespace-pre-line" data-i18n="ai.card2.title">{en.ai.card2.title}</h3>
+      <p class="mb-4 text-sm leading-relaxed text-white/72" data-i18n="ai.card2.desc">
+        {en.ai.card2.desc}
+      </p>
+      <div class="rounded-xl border border-white/[0.06] bg-[#030712] p-4 font-mono text-xs">
+        <div class="text-text-primary">CLIX → macOS banner → Open Session</div>
+        <div class="text-blue-muted mt-1" data-i18n="ai.card2.demoOutput">{en.ai.card2.demoOutput}</div>
+      </div>
+    </div>
+
+    <!-- Card 3: clix-pick -->
+    <div
+      class="card-top-line relative rounded-2xl border border-blue-muted/15 bg-white/[0.02] p-5 sm:p-6 md:p-8"
+    >
+      <div class="mb-4">
+        <SectionIconBadge name="route" />
+      </div>
+      <h3 class="text-xl font-bold text-text-primary mb-2.5 whitespace-pre-line" data-i18n="ai.card3.title">{en.ai.card3.title}</h3>
+      <p class="mb-4 text-sm leading-relaxed text-white/72" data-i18n="ai.card3.desc">
+        {en.ai.card3.desc}
+      </p>
+      <div class="rounded-xl border border-white/[0.06] bg-[#030712] p-4 font-mono text-xs">
+        <div class="text-text-primary">$ clix-pick codex</div>
+        <div class="text-blue-muted mt-1" data-i18n="ai.card3.demoOutput">{en.ai.card3.demoOutput}</div>
+      </div>
+    </div>
+
+  </div>
+</section>

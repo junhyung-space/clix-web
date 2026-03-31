@@ -1,0 +1,40 @@
+---
+import { en } from '../i18n/en';
+---
+
+<section
+  id="download"
+  class="border-t border-blue-muted/10 px-4 py-16 text-center sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-16 lg:py-28"
+  style="background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(30,64,175,0.18), transparent 70%), #080c14;"
+>
+  <h2 class="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+    <span class="grad-text" data-i18n="download.title1">{en.download.title1}</span>
+    <br />
+    <span class="grad-text" data-i18n="download.title2">{en.download.title2}</span>
+  </h2>
+  <div class="mt-8 flex flex-col items-center gap-4 sm:mt-10">
+    <a
+      href="/guide#getting-started"
+      class="btn-primary inline-flex items-center gap-2.5 text-white
+             rounded-xl px-8 py-4 text-base font-bold
+             sm:px-12 sm:py-5 sm:text-lg md:px-14"
+      data-i18n="download.cta"
+    >
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 shrink-0" aria-hidden="true">
+        <path d="M10 3v10M6 9l4 4 4-4"/>
+        <path d="M3 15v1a2 2 0 002 2h10a2 2 0 002-2v-1"/>
+      </svg>
+      {en.download.cta}
+    </a>
+    <p class="text-xs text-white/68" data-i18n="download.req">
+      {en.download.req}
+    </p>
+    <p
+      class="text-xs text-white/68"
+      data-i18n="download.releases"
+    >
+      {en.download.releases}
+    </p>
+  </div>
+</section>
