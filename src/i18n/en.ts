@@ -2,7 +2,7 @@ import type { Translations } from './ko';
 
 export const en: Translations = {
   nav: {
-    download: 'Download',
+    download: 'Download for Mac',
     guide: 'Guide',
   },
 
@@ -10,7 +10,7 @@ export const en: Translations = {
     headline1: 'From SSH setup',
     headline2: 'to AI work in one place.',
     sub: 'A macOS app for SSH host management, port forwarding, completion alerts, and continuing AI sessions.',
-    cta: 'Free Download',
+    cta: 'Download for Mac',
     meta: 'macOS 14.0 Sonoma or later · Apple Silicon & Intel · unsigned preview build',
   },
 

@@ -1,7 +1,7 @@
 export const ko = {
   // Nav
   nav: {
-    download: '다운로드',
+    download: 'Mac용 다운로드',
     guide: '가이드',
   },
 
@@ -10,7 +10,7 @@ export const ko = {
     headline1: 'SSH 연결부터',
     headline2: 'AI 작업까지 한곳에서',
     sub: 'SSH 호스트 관리, 포트 포워딩, 작업 완료 알림, AI 세션 이어가기를 지원하는 macOS 앱',
-    cta: '무료 다운로드',
+    cta: 'Mac용 다운로드',
     meta: 'macOS 14.0 Sonoma 이상 · Apple Silicon & Intel · 비공식 서명 없는 배포',
   },
 
