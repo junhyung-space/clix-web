@@ -76,11 +76,11 @@ export const en: Translations = {
   },
 
   download: {
-    title1: 'Before installing,',
-    title2: 'check how the app is distributed.',
-    cta: 'View Installation Guide',
-    req: 'macOS 14.0 Sonoma or later · Apple Silicon (arm64)',
-    releases: 'The current guide explains installation and macOS security approval for the unsigned distribution flow.',
+    title1: 'Download CLIX',
+    title2: 'for Mac.',
+    cta: 'Download for Mac — Free',
+    req: 'macOS 14.0 Sonoma or later · Apple Silicon (arm64) · v0.1.0',
+    releases: 'Unsigned build. After downloading, open the zip and right-click → Open to bypass Gatekeeper.',
   },
 
   footer: {

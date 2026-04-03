@@ -81,11 +81,11 @@ export const ko = {
 
   // Download
   download: {
-    title1: '설치 전에',
-    title2: '실행 방식부터 확인하세요',
-    cta: '설치 가이드 보기',
-    req: 'macOS 14.0 Sonoma 이상 · Apple Silicon (arm64)',
-    releases: '현재 서명 없는 배포 방식 기준으로 설치와 보안 허용 절차를 안내합니다',
+    title1: 'CLIX 다운로드',
+    title2: 'for Mac.',
+    cta: 'Mac용 다운로드 — 무료',
+    req: 'macOS 14.0 Sonoma 이상 · Apple Silicon (arm64) · v0.1.0',
+    releases: '서명 없는 빌드입니다. 압축 해제 후 앱을 우클릭 → 열기로 Gatekeeper를 우회하세요.',
   },
 
   // Footer
