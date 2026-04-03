@@ -1,5 +1,6 @@
 ---
 import { en } from '../i18n/en';
+import { RELEASE_DOWNLOAD_URL } from '../config/release';
 
 const isGuide = Astro.url.pathname.startsWith('/guide');
 
@@ -138,7 +139,7 @@ const guideSections = [
       </button>
 
       <a
-        href="https://github.com/junhyung-space/clix-web/releases/latest/download/CLIX-0.1.0.zip"
+        href={RELEASE_DOWNLOAD_URL}
         download
         class="btn-primary inline-flex h-8 items-center rounded-lg px-3 text-[11px] font-semibold
                text-white sm:h-9 sm:px-3.5 sm:text-sm"
@@ -236,7 +237,7 @@ const guideSections = [
       </button>
 
       <a
-        href="https://github.com/junhyung-space/clix-web/releases/latest/download/CLIX-0.1.0.zip"
+        href={RELEASE_DOWNLOAD_URL}
         download
         class="btn-primary inline-flex h-12 items-center justify-center rounded-2xl
                text-sm font-semibold text-white"
