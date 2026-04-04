@@ -1,0 +1,57 @@
+---
+import { en } from '../../../i18n/en';
+
+const guide = en.guide.browser;
+---
+<div id="browser" class="guide-section guide-shell">
+  <p class="guide-kicker text-blue-accent text-[10px] font-bold tracking-[0.1em] uppercase" data-i18n="guide.browser.label">{guide.label}</p>
+  <h2 class="guide-title" data-i18n="guide.browser.title">{guide.title}</h2>
+  <p class="guide-copy" data-i18n="guide.browser.sub">
+    {guide.sub}
+  </p>
+
+  <div class="guide-summary">
+    <p class="guide-summary-title" data-i18n="guide.common.whatYoullDo">{en.guide.common.whatYoullDo}</p>
+    <ul class="guide-summary-list">
+      <li data-i18n="guide.browser.openTitle">{guide.openTitle}</li>
+      <li data-i18n="guide.browser.snapshotTitle">{guide.snapshotTitle}</li>
+      <li data-i18n="guide.browser.interactTitle">{guide.interactTitle}</li>
+      <li data-i18n="guide.browser.verifyTitle">{guide.verifyTitle}</li>
+    </ul>
+  </div>
+
+  {[
+    { titleKey: 'guide.browser.scopeTitle',    descKey: 'guide.browser.scopeDesc',    titleDefault: guide.scopeTitle,    descDefault: guide.scopeDesc },
+    { titleKey: 'guide.browser.workflowTitle', descKey: 'guide.browser.workflowDesc', titleDefault: guide.workflowTitle, descDefault: guide.workflowDesc },
+    { titleKey: 'guide.browser.openTitle',     descKey: 'guide.browser.openDesc',     titleDefault: guide.openTitle,     descDefault: guide.openDesc },
+    { titleKey: 'guide.browser.snapshotTitle', descKey: 'guide.browser.snapshotDesc', titleDefault: guide.snapshotTitle, descDefault: guide.snapshotDesc },
+    { titleKey: 'guide.browser.interactTitle', descKey: 'guide.browser.interactDesc', titleDefault: guide.interactTitle, descDefault: guide.interactDesc },
+    { titleKey: 'guide.browser.verifyTitle',   descKey: 'guide.browser.verifyDesc',   titleDefault: guide.verifyTitle,   descDefault: guide.verifyDesc },
+    { titleKey: 'guide.browser.tabsTitle',     descKey: 'guide.browser.tabsDesc',     titleDefault: guide.tabsTitle,     descDefault: guide.tabsDesc },
+  ].map(({ titleKey, descKey, titleDefault, descDefault }) => (
+    <section class="guide-section-block">
+      <h3 class="guide-subtitle" data-i18n={titleKey}>{titleDefault}</h3>
+      <p class="guide-prose" data-i18n={descKey}>{descDefault}</p>
+    </section>
+  ))}
+
+  <div class="guide-code">
+    <div class="guide-code-line-muted" data-i18n="guide.browser.exampleLine1">{guide.exampleLine1}</div>
+    <div class="guide-code-line" data-i18n="guide.browser.exampleLine2">{guide.exampleLine2}</div>
+    <div class="guide-code-line-muted mt-2" data-i18n="guide.browser.exampleLine3">{guide.exampleLine3}</div>
+    <div class="guide-code-line" data-i18n="guide.browser.exampleLine4">{guide.exampleLine4}</div>
+    <div class="guide-code-line-muted mt-2" data-i18n="guide.browser.exampleLine5">{guide.exampleLine5}</div>
+    <div class="guide-code-line" data-i18n="guide.browser.exampleLine6">{guide.exampleLine6}</div>
+    <div class="guide-code-line-muted mt-2" data-i18n="guide.browser.exampleLine7">{guide.exampleLine7}</div>
+    <div class="guide-code-line" data-i18n="guide.browser.exampleLine8">{guide.exampleLine8}</div>
+    <div class="guide-code-line-muted mt-2" data-i18n="guide.browser.exampleLine9">{guide.exampleLine9}</div>
+    <div class="guide-code-line" data-i18n="guide.browser.exampleLine10">{guide.exampleLine10}</div>
+  </div>
+
+  <div class="guide-next">
+    <p class="guide-next-label" data-i18n="guide.common.nextStep">{en.guide.common.nextStep}</p>
+    <p class="guide-next-copy" data-i18n="guide.browser.nextStep">
+      {guide.nextStep}
+    </p>
+  </div>
+</div>
