@@ -3,11 +3,11 @@ import SectionIconBadge from './SectionIconBadge.astro';
 import { en } from '../i18n/en';
 
 const features = [
-  { icon: 'globe',    titleKey: 'browser.feat1Title', descKey: 'browser.feat1Desc',
+  { icon: 'globe' as const,    titleKey: 'browser.feat1Title', descKey: 'browser.feat1Desc',
     titleDefault: en.browser.feat1Title, descDefault: en.browser.feat1Desc },
-  { icon: 'terminal', titleKey: 'browser.feat2Title', descKey: 'browser.feat2Desc',
+  { icon: 'terminal' as const, titleKey: 'browser.feat2Title', descKey: 'browser.feat2Desc',
     titleDefault: en.browser.feat2Title, descDefault: en.browser.feat2Desc },
-  { icon: 'search',   titleKey: 'browser.feat3Title', descKey: 'browser.feat3Desc',
+  { icon: 'search' as const,   titleKey: 'browser.feat3Title', descKey: 'browser.feat3Desc',
     titleDefault: en.browser.feat3Title, descDefault: en.browser.feat3Desc },
 ];
 ---
@@ -37,7 +37,7 @@ const features = [
         {features.map(f => (
           <div class="flex items-start gap-4">
             <div class="flex-shrink-0">
-              <SectionIconBadge name={f.icon as any} size="sm" />
+              <SectionIconBadge name={f.icon} size="sm" />
             </div>
             <div>
               <h4 class="text-sm font-semibold text-text-primary mb-1" data-i18n={f.titleKey}>
