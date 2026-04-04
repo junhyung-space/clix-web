@@ -12,7 +12,8 @@ interface Props {
     | 'network'
     | 'tunnel'
     | 'archive'
-    | 'search';
+    | 'search'
+    | 'globe';
   size?: 'sm' | 'md';
 }
 
@@ -86,6 +87,11 @@ const themeByName = {
     color: '#CBD5E1',
     background: 'rgba(203, 213, 225, 0.12)',
     border: 'rgba(203, 213, 225, 0.24)',
+  },
+  globe: {
+    color: '#34D399',
+    background: 'rgba(52, 211, 153, 0.12)',
+    border: 'rgba(52, 211, 153, 0.24)',
   },
 } as const;
 
@@ -198,6 +204,16 @@ const theme = themeByName[name];
       <>
         <circle cx="11" cy="11" r="5.5" />
         <path d="M16 16l4 4" />
+      </>
+    )}
+    {name === 'globe' && (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 3c-2.5 3-4 5.5-4 9s1.5 6 4 9" />
+        <path d="M12 3c2.5 3 4 5.5 4 9s-1.5 6-4 9" />
+        <path d="M3 12h18" />
+        <path d="M3.6 8h16.8" />
+        <path d="M3.6 16h16.8" />
       </>
     )}
   </svg>
