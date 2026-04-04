@@ -5,6 +5,7 @@ import SSHGuide from '../components/guide/sections/SSHGuide.astro';
 import PortForwardingGuide from '../components/guide/sections/PortForwardingGuide.astro';
 import WorkspaceGuide from '../components/guide/sections/WorkspaceGuide.astro';
 import AIIntegrationGuide from '../components/guide/sections/AIIntegrationGuide.astro';
+import BrowserGuide from '../components/guide/sections/BrowserGuide.astro';
 import BackupGuide from '../components/guide/sections/BackupGuide.astro';
 import SettingsGuide from '../components/guide/sections/SettingsGuide.astro';
 ---
@@ -15,6 +16,7 @@ import SettingsGuide from '../components/guide/sections/SettingsGuide.astro';
   <PortForwardingGuide />
   <WorkspaceGuide />
   <AIIntegrationGuide />
+  <BrowserGuide />
   <BackupGuide />
   <SettingsGuide />
 </GuideLayout>
@@ -26,6 +28,7 @@ import SettingsGuide from '../components/guide/sections/SettingsGuide.astro';
     'port-forwarding',
     'workspace',
     'ai-integration',
+    'browser',
     'backup',
     'settings',
   ] as const;
