@@ -1,0 +1,87 @@
+---
+import SectionIconBadge from './SectionIconBadge.astro';
+import { en } from '../i18n/en';
+
+const features = [
+  { icon: 'globe',    titleKey: 'browser.feat1Title', descKey: 'browser.feat1Desc',
+    titleDefault: en.browser.feat1Title, descDefault: en.browser.feat1Desc },
+  { icon: 'terminal', titleKey: 'browser.feat2Title', descKey: 'browser.feat2Desc',
+    titleDefault: en.browser.feat2Title, descDefault: en.browser.feat2Desc },
+  { icon: 'search',   titleKey: 'browser.feat3Title', descKey: 'browser.feat3Desc',
+    titleDefault: en.browser.feat3Title, descDefault: en.browser.feat3Desc },
+];
+---
+
+<section
+  class="border-t border-white/[0.04] bg-bg-secondary px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-16"
+>
+  <div class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
+
+    <!-- Left: Text -->
+    <div>
+      <span
+        class="inline-block bg-blue-muted/15 border border-blue-muted/30 text-blue-accent
+               text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
+        data-i18n="browser.label"
+      >{en.browser.label}</span>
+      <h2 class="mb-3 text-3xl font-extrabold tracking-tight leading-tight sm:text-4xl">
+        <span class="grad-text" data-i18n="browser.title1">{en.browser.title1}</span>
+        <br />
+        <span class="grad-text" data-i18n="browser.title2">{en.browser.title2}</span>
+      </h2>
+      <p class="text-sm leading-relaxed text-white/72" data-i18n="browser.sub">
+        {en.browser.sub}
+      </p>
+
+      <div class="mt-8 flex flex-col gap-5">
+        {features.map(f => (
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <SectionIconBadge name={f.icon as any} size="sm" />
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-text-primary mb-1" data-i18n={f.titleKey}>
+                {f.titleDefault}
+              </h4>
+              <p class="text-xs leading-relaxed text-white/68" data-i18n={f.descKey}>
+                {f.descDefault}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Right: Terminal demo -->
+    <div
+      class="overflow-hidden rounded-2xl"
+      style="background: #030712; border: 1px solid rgba(59,130,246,0.2); box-shadow: 0 0 60px rgba(14,165,233,0.08), 0 30px 60px rgba(0,0,0,0.4);"
+    >
+      <!-- Title bar -->
+      <div class="flex items-center gap-1.5 border-b border-white/[0.06] px-4 py-3">
+        <div class="h-3 w-3 rounded-full bg-white/10"></div>
+        <div class="h-3 w-3 rounded-full bg-white/10"></div>
+        <div class="h-3 w-3 rounded-full bg-white/10"></div>
+        <span class="ml-2 text-[11px] text-white/30 font-mono">clix-browser</span>
+      </div>
+      <!-- Code -->
+      <div class="p-5 font-mono text-xs leading-relaxed">
+        <div class="text-white/40 mb-1" data-i18n="browser.demoComment">{en.browser.demoComment}</div>
+        <div class="text-white/90">$ clix-browser open https://localhost:3000</div>
+        <div class="text-blue-400/80 mt-0.5 mb-3">→ tab opened</div>
+
+        <div class="text-white/90">$ clix-browser snapshot</div>
+        <div class="text-white/40 mt-0.5">→ [ref=4]  link "Home"</div>
+        <div class="text-white/40">→ [ref=9]  button "Submit"</div>
+        <div class="text-white/40 mb-3">→ [ref=14] input "Search"</div>
+
+        <div class="text-white/90">$ clix-browser click 9</div>
+        <div class="text-blue-400/80 mt-0.5 mb-3">→ clicked</div>
+
+        <div class="text-white/90">$ clix-browser screenshot</div>
+        <div class="text-blue-400/80 mt-0.5">→ [PNG base64...]</div>
+      </div>
+    </div>
+
+  </div>
+</section>
