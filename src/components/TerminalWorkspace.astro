@@ -18,10 +18,8 @@ const features = [
 <section
   class="border-t border-white/[0.04] bg-bg-secondary px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-24 lg:px-16"
 >
-  <div class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
-
-    <!-- Left: Text -->
-    <div>
+  <div class="mx-auto max-w-4xl">
+    <div class="max-w-2xl">
       <span
         class="inline-block bg-blue-muted/15 border border-blue-muted/30 text-blue-accent
                text-[10px] font-bold tracking-[3px] uppercase px-2.5 py-0.5 rounded mb-3"
@@ -35,38 +33,50 @@ const features = [
       <p class="text-sm leading-relaxed text-white/72" data-i18n="workspace.sub">
         {en.workspace.sub}
       </p>
+    </div>
 
-      <div class="mt-8 flex flex-col gap-5">
-        {features.map(f => (
-          <div class="flex items-start gap-4">
-            <div class="flex-shrink-0">
-              <SectionIconBadge name={f.icon} size="sm" />
-            </div>
-            <div>
-              <h4 class="text-sm font-semibold text-text-primary mb-1" data-i18n={f.titleKey}>
-                {f.titleDefault}
-              </h4>
-              <p class="text-xs leading-relaxed text-white/68" data-i18n={f.descKey}>
-                {f.descDefault}
-              </p>
-            </div>
+    <div class="mt-10 grid gap-5 md:grid-cols-3">
+      {features.map(f => (
+        <div class="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
+          <div class="mb-4">
+            <SectionIconBadge name={f.icon} size="sm" />
           </div>
-        ))}
+          <h4 class="text-sm font-semibold text-text-primary mb-1" data-i18n={f.titleKey}>
+            {f.titleDefault}
+          </h4>
+          <p class="text-xs leading-relaxed text-white/68" data-i18n={f.descKey}>
+            {f.descDefault}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] md:p-6">
+      <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-white/52">
+        Session Flow
+      </p>
+      <div class="mt-4 grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-start">
+        <div>
+          <h4 class="text-sm font-semibold text-text-primary">Open and group sessions</h4>
+          <p class="mt-1 text-xs leading-relaxed text-white/68">
+            Keep local terminals and remote sessions inside the same work group when they belong to one task.
+          </p>
+        </div>
+        <div class="hidden text-white/28 md:block">→</div>
+        <div>
+          <h4 class="text-sm font-semibold text-text-primary">Run saved snippets</h4>
+          <p class="mt-1 text-xs leading-relaxed text-white/68">
+            Reuse health checks, deploy prep commands, and repeated SSH utilities without retyping them.
+          </p>
+        </div>
+        <div class="hidden text-white/28 md:block">→</div>
+        <div>
+          <h4 class="text-sm font-semibold text-text-primary">Recover and reconnect</h4>
+          <p class="mt-1 text-xs leading-relaxed text-white/68">
+            Restore the last workspace state and continue reconnect flows after restart or wake-from-sleep.
+          </p>
+        </div>
       </div>
     </div>
-
-    <!-- Right: Terminal screenshot -->
-    <div
-      class="overflow-hidden rounded-2xl"
-      style="background: #0d1117; border: 1px solid rgba(59,130,246,0.2); box-shadow: 0 0 60px rgba(14,165,233,0.08), 0 30px 60px rgba(0,0,0,0.4);"
-    >
-      <img
-        src="/images/clix-terminal-workspace.png"
-        alt="CLIX terminal workspace screenshot"
-        class="block w-full h-auto"
-        loading="lazy"
-      />
-    </div>
-
   </div>
 </section>
