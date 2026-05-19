@@ -12,11 +12,11 @@ Astro + Tailwind CSS 기반 정적 사이트로, GitHub Pages에 자동 배포�
 
 | 항목 | 내용 |
 |------|------|
-| **다운로드 URL** | `https://github.com/junhyung-space/clix-web/releases/download/v0.1.0/CLIX-0.1.0.zip` |
-| **현재 버전** | v0.1.0 |
+| **다운로드 URL** | `https://github.com/junhyung-space/clix-web/releases/download/v0.1.1/CLIX-0.1.1.zip` |
+| **현재 버전** | v0.1.1 |
 | **요구 사항** | macOS 14.0 Sonoma 이상 · Apple Silicon (arm64) |
 
-웹사이트의 다운로드 버튼은 위 `releases/download/v0.1.0/CLIX-0.1.0.zip` URL을 가리킵니다. 따라서 태그와 자산명을 함께 맞춰 릴리즈를 올려야 합니다.
+웹사이트의 다운로드 버튼은 위 `releases/download/v0.1.1/CLIX-0.1.1.zip` URL을 가리킵니다. 따라서 태그와 자산명을 함께 맞춰 릴리즈를 올려야 합니다.
 
 ---
 
@@ -26,7 +26,7 @@ Astro + Tailwind CSS 기반 정적 사이트로, GitHub Pages에 자동 배포�
 
 ```bash
 cd ~/Workspace/projects/clix
-scripts/release_clix_web.sh --version 0.1.0 --notes "릴리즈 노트"
+scripts/release_clix_web.sh --version 0.1.1 --notes "릴리즈 노트"
 ```
 
 이 스크립트가 `clix` Release 빌드, zip 생성, 이 레포의 GitHub Release create/upload, 그리고 `src/config/release.ts` 갱신까지 함께 처리합니다.
@@ -51,19 +51,19 @@ xcodebuild \
 
 ditto -c -k --keepParent \
   /tmp/clix-release-build/Build/Products/Release/CLIX.app \
-  /tmp/CLIX-0.1.0.zip
+  /tmp/CLIX-0.1.1.zip
 ```
 
 ### 2. 이 레포에 Release 등록
 
 ```bash
 # 신규 버전
-gh -R junhyung-space/clix-web release create v0.1.0 /tmp/CLIX-0.1.0.zip \
-  --title "CLIX v0.1.0" \
+gh -R junhyung-space/clix-web release create v0.1.1 /tmp/CLIX-0.1.1.zip \
+  --title "CLIX v0.1.1" \
   --notes "릴리즈 노트"
 
 # 기존 버전에 파일 교체
-gh -R junhyung-space/clix-web release upload v0.1.0 /tmp/CLIX-0.1.0.zip --clobber
+gh -R junhyung-space/clix-web release upload v0.1.1 /tmp/CLIX-0.1.1.zip --clobber
 ```
 
 > 현재 웹사이트는 태그와 파일명이 모두 포함된 URL을 사용하므로, 버전이 바뀌면 `src/config/release.ts`와 릴리즈 태그/자산명을 같이 업데이트해야 합니다.

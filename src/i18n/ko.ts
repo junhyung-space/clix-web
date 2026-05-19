@@ -98,7 +98,7 @@ export const ko = {
     title1: 'CLIX 다운로드',
     title2: 'for Mac.',
     cta: 'Mac용 다운로드 — 무료',
-    req: 'macOS 14.0 Sonoma 이상 · Apple Silicon (arm64) · v0.1.0',
+    req: 'macOS 14.0 Sonoma 이상 · Apple Silicon (arm64) · v0.1.1',
     releases: '서명 없는 빌드입니다. 압축 해제 후 앱을 우클릭 → 열기로 Gatekeeper를 우회하세요.',
   },
 

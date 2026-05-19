@@ -92,7 +92,7 @@ export const en: Translations = {
     title1: 'Download CLIX',
     title2: 'for Mac.',
     cta: 'Download for Mac — Free',
-    req: 'macOS 14.0 Sonoma or later · Apple Silicon (arm64) · v0.1.0',
+    req: 'macOS 14.0 Sonoma or later · Apple Silicon (arm64) · v0.1.1',
     releases: 'Unsigned build. After downloading, open the zip and right-click → Open to bypass Gatekeeper.',
   },
 
